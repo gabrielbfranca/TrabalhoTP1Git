@@ -2,3 +2,37 @@
 1584205420 source:f:\projetos\trabalhodetp1\main.cpp
 	<iostream>
 
+1668096745 source:f:\projetos\trabalhotp1git\testes.cpp
+	"testes.h"
+
+1668096604 f:\projetos\trabalhotp1git\testes.h
+	"dominios.h"
+	"entidades.h"
+
+1668351091 f:\projetos\trabalhotp1git\dominios.h
+	<string>
+
+1668350063 f:\projetos\trabalhotp1git\entidades.h
+
+1668350735 source:f:\projetos\trabalhotp1git\dominios.cpp
+	"dominios.h"
+
+1668350206 source:f:\projetos\trabalhotp1git\entidades.cpp
+	"entidades.h"
+
+1668213445 source:f:\projetos\trabalhotp1git\main.cpp
+	<iostream>
+	"codigo.h"
+
+1668289126 f:\projetos\trabalhotp1git\codigo.h
+	"template.h"
+
+1668288923 f:\projetos\trabalhotp1git\template.h
+	<string>
+
+1668291896 source:f:\projetos\trabalhotp1git\template.cpp
+	"template.h"
+
+1668289349 source:f:\projetos\trabalhotp1git\codigo.cpp
+	"codigo.h"
+

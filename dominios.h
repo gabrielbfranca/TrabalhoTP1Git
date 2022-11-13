@@ -1,17 +1,27 @@
 #ifndef DOMINIOS_H_INCLUDED
 #define DOMINIOS_H_INCLUDED
+#include <string>
 
-class Dominio {
+using namespace std;
+
+class Codigo {
     private:
-        int valor;
-        void validar(int);
+        std::string codigo;
+        static const int LIMITE = 11;
+        void validar(std::string);
     public:
-        void setValor(int);
-        int getValor() const;
-};
+        void setCodigo(std::string);
+        std::string getCodigo();
 
-inline int Dominio::getValor() const{
-    return valor;
+
+        Codigo();
+
+};
+inline std::string Codigo::getCodigo() {
+        return codigo;
+}
+inline Codigo::Codigo() {
+    this->codigo = "";
 }
 
 #endif // DOMINIOS_H_INCLUDED
