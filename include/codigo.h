@@ -1,5 +1,5 @@
-#ifndef DOMINIOS_H_INCLUDED
-#define DOMINIOS_H_INCLUDED
+#ifndef CODIGO_H
+#define CODIGO_H
 #include <string>
 
 using namespace std;
@@ -7,7 +7,6 @@ using namespace std;
 class Codigo {
     private:
         string codigo;
-        static const int LIMITE = 11;
         void validar(string);
     public:
         void setCodigo(string);
@@ -22,4 +21,4 @@ inline Codigo::Codigo() {
     this->codigo = "";
 }
 
-#endif // DOMINIOS_H_INCLUDED
+#endif // CODIGO_H
