@@ -21,7 +21,7 @@ int main()
     Texto texto1;
     Disciplina disc1;
 
-    code1.setCodigo("codigo");
+    code1.setCodigo("12345678912");
     data1.setData("data");
     mat1.setMatricula("matricula");
     nome1.setNome("nome");

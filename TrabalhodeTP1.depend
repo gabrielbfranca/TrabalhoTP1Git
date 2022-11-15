@@ -20,9 +20,15 @@
 1668350206 source:f:\projetos\trabalhotp1git\entidades.cpp
 	"entidades.h"
 
-1668213445 source:f:\projetos\trabalhotp1git\main.cpp
+1668437875 source:f:\projetos\trabalhotp1git\main.cpp
 	<iostream>
 	"codigo.h"
+	"data.h"
+	"matricula.h"
+	"nome.h"
+	"senha.h"
+	"texto.h"
+	"disciplina.h"
 
 1668289126 f:\projetos\trabalhotp1git\codigo.h
 	"template.h"
@@ -86,4 +92,46 @@
 
 1668404393 c:\users\brave\documents\github\trabalhotp1git\include\texto.h
 	<string>
+
+1668437875 f:\projetos\trabalhotp1git\include\codigo.h
+	<string>
+
+1668437875 f:\projetos\trabalhotp1git\include\data.h
+	<string>
+
+1668437875 f:\projetos\trabalhotp1git\include\matricula.h
+	<string>
+
+1668437875 f:\projetos\trabalhotp1git\include\nome.h
+	<string>
+
+1668437875 f:\projetos\trabalhotp1git\include\senha.h
+	<string>
+
+1668437875 f:\projetos\trabalhotp1git\include\texto.h
+	<string>
+
+1668437875 f:\projetos\trabalhotp1git\include\disciplina.h
+	<string>
+
+1668437875 source:f:\projetos\trabalhotp1git\src\codigo.cpp
+	"codigo.h"
+
+1668437875 source:f:\projetos\trabalhotp1git\src\data.cpp
+	"data.h"
+
+1668437875 source:f:\projetos\trabalhotp1git\src\disciplina.cpp
+	"disciplina.h"
+
+1668437875 source:f:\projetos\trabalhotp1git\src\matricula.cpp
+	"matricula.h"
+
+1668437875 source:f:\projetos\trabalhotp1git\src\nome.cpp
+	"nome.h"
+
+1668437875 source:f:\projetos\trabalhotp1git\src\senha.cpp
+	"senha.h"
+
+1668437875 source:f:\projetos\trabalhotp1git\src\texto.cpp
+	"texto.h"
 
