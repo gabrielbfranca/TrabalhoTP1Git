@@ -14,11 +14,5 @@ class Data {
         Data();
 
 };
-inline string Data::getData() {
-    return data;
-}
-inline Data::Data() {
-    this->data = "";
-}
 
 #endif // DATA_H

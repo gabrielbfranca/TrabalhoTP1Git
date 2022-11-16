@@ -14,11 +14,5 @@ class Nome {
         Nome();
 
 };
-inline string Nome::getNome() {
-    return nome;
-}
-inline Nome::Nome() {
-    this->nome = "";
-}
 
 #endif // NOME_H

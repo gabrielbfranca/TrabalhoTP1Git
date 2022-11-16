@@ -14,11 +14,5 @@ class Texto {
         Texto();
 
 };
-inline string Texto::getTexto() {
-    return texto;
-}
-inline Texto::Texto() {
-    this->texto = "";
-}
 
 #endif // TEXTO_H

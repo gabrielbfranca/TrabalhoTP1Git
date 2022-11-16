@@ -14,11 +14,5 @@ class Senha {
         Senha();
 
 };
-inline string Senha::getSenha() {
-    return senha;
-}
-inline Senha::Senha() {
-    this->senha = "";
-}
 
 #endif // SENHA_H

@@ -41,6 +41,7 @@
 		<Unit filename="include/nome.h" />
 		<Unit filename="include/senha.h" />
 		<Unit filename="include/texto.h" />
+		<Unit filename="include/usuario.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/codigo.cpp" />
 		<Unit filename="src/data.cpp" />
@@ -49,6 +50,7 @@
 		<Unit filename="src/nome.cpp" />
 		<Unit filename="src/senha.cpp" />
 		<Unit filename="src/texto.cpp" />
+		<Unit filename="src/usuario.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

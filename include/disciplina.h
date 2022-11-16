@@ -14,11 +14,5 @@ class Disciplina {
         Disciplina();
 
 };
-inline string Disciplina::getDisciplina() {
-    return disciplina;
-}
-inline Disciplina::Disciplina() {
-    this->disciplina = "";
-}
 
 #endif // DISCIPLINA_H

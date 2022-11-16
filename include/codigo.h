@@ -14,11 +14,5 @@ class Codigo {
         Codigo();
 
 };
-inline string Codigo::getCodigo() {
-    return codigo;
-}
-inline Codigo::Codigo() {
-    this->codigo = "";
-}
 
 #endif // CODIGO_H

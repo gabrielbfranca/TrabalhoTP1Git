@@ -14,11 +14,5 @@ class Matricula {
         Matricula();
 
 };
-inline string Matricula::getMatricula() {
-    return matricula;
-}
-inline Matricula::Matricula() {
-    this->matricula = "";
-}
 
 #endif // MATRICULA_H
