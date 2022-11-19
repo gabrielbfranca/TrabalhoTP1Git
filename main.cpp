@@ -14,43 +14,60 @@ using namespace std;
 
 int main()
 {
+    // teste do dominio Codigo
     Codigo code1;
-    Data data1;
-    Matricula mat1;
-    Nome nome1;
-    Senha senha1;
-    Texto texto1;
-    Disciplina disc1;
-
-
-    data1.setData("data");
-    disc1.setDisciplina("disciplina");
-    mat1.setMatricula("matricula");
-    nome1.setNome("nome");
-    senha1.setSenha("senha");
-    texto1.setTexto("texto");
-
-     try{
-         //valor_valido => 12345678917
-        code1.setCodigo("12345678917");
-    }
-    catch(invalid_argument &excecao){
-        cout<<"erro"<<endl;
-    }
+    code1.setCodigo("12345678917");
     cout << code1.getCodigo() << endl;
+
+    cout << "" << endl;
+
+    // teste de dominio Data (incompleto)
+    Data data1;
+    data1.setData("data");
     cout << data1.getData() << endl;
+
+    cout << "" << endl;
+
+    // teste de dominio Disciplina
+    Disciplina disc1;
+    disc1.setDisciplina("Arquitetura");
     cout << disc1.getDisciplina() << endl;
+
+    cout << "" << endl;
+
+    // teste de dominio Matricula
+    Matricula mat1;
+    mat1.setMatricula("ABCD1234");
     cout << mat1.getMatricula() << endl;
+
+    cout << "" << endl;
+
+    // teste de dominio Nome (incompleto)
+    Nome nome1;
+    nome1.setNome("nome");
     cout << nome1.getNome() << endl;
+
+    cout << "" << endl;
+
+    // teste de dominio Senha
+    Senha senha1;
+    senha1.setSenha("1234AB");
     cout << senha1.getSenha() << endl;
+
+    cout << "" << endl;
+
+    // teste de dominio Texto (incompleto)
+    Texto texto1;
+    texto1.setTexto("texto");
     cout << texto1.getTexto() << endl;
 
-    cout << "\nHello world!" << endl;
+    cout << "" << endl;
 
+    // teste de entidade Usuario
     Usuario usuario1;
-    usuario1.setMatricula("teste");
+    usuario1.setMatricula("ABCD1234");
     usuario1.setNome("teste");
-    usuario1.setSenha("teste");
+    usuario1.setSenha("A1234B");
     cout << usuario1.getMatricula() << endl;
     cout << usuario1.getNome() << endl;
     cout << usuario1.getSenha() << endl;

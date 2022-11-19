@@ -7,11 +7,11 @@ using namespace std;
 class Senha {
     private:
         string senha;
-        void validar(string);
     public:
         void setSenha(string);
         string getSenha();
         Senha();
+        void validar(string);
 
 };
 
