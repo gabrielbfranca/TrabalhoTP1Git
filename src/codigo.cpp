@@ -27,10 +27,10 @@ void Codigo::validar(string codigo) {
     int n, sobra = 0;
 
     for (int i = 0; i < len - 1; i++) {
-        n = sobra*10 + (str[i] - '0');
+        n = sobra*10 + (codigo[i] - '0');
         sobra = n % 11;
     }
-    if (sobra != codigo[11]) {
-        throw invalid_argument("Digito verificador inválido")
+    if (sobra != (codigo[10]- '0')) {
+        throw invalid_argument("Digito verificador inválido");
     }
 }

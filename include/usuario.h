@@ -9,6 +9,11 @@ using namespace std;
 
 class Usuario
 {
+    private:
+        Nome nome;
+        Matricula matricula;
+        Senha senha;
+
     public:
         Usuario();
         void setNome(string);
@@ -18,10 +23,6 @@ class Usuario
         string getMatricula();
         string getSenha();
 
-    private:
-        Nome nome;
-        Matricula matricula;
-        Senha senha;
 };
 
 #endif // USUARIO_H

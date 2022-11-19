@@ -22,7 +22,7 @@ int main()
     Texto texto1;
     Disciplina disc1;
 
-    code1.setCodigo("12345678912");
+
     data1.setData("data");
     disc1.setDisciplina("disciplina");
     mat1.setMatricula("matricula");
@@ -30,6 +30,13 @@ int main()
     senha1.setSenha("senha");
     texto1.setTexto("texto");
 
+     try{
+         //valor_valido => 12345678917
+        code1.setCodigo("12345678917");
+    }
+    catch(invalid_argument &excecao){
+        cout<<"erro"<<endl;
+    }
     cout << code1.getCodigo() << endl;
     cout << data1.getData() << endl;
     cout << disc1.getDisciplina() << endl;
