@@ -13,10 +13,6 @@ void Disciplina::validar(string disciplina) {
     }
 }
 
-string Disciplina::getDisciplina() {
-    return disciplina;
-};
-
 Disciplina::Disciplina() {
     this->disciplina = "";
 };

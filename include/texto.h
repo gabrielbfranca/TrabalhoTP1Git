@@ -15,4 +15,8 @@ class Texto {
 
 };
 
+inline string Texto::getTexto() {
+    return texto;
+};
+
 #endif // TEXTO_H

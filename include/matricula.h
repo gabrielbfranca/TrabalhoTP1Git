@@ -15,4 +15,8 @@ class Matricula {
 
 };
 
+inline string Matricula::getMatricula() {
+    return this->matricula;
+};
+
 #endif // MATRICULA_H

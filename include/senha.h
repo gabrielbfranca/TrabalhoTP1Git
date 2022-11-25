@@ -15,4 +15,8 @@ class Senha {
 
 };
 
+inline string Senha::getSenha() {
+    return senha;
+};
+
 #endif // SENHA_H
