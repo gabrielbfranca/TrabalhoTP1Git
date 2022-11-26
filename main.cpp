@@ -65,12 +65,9 @@ int main()
 
     // teste de entidade Usuario
     Usuario usuario1;
-    usuario1.setMatricula("ABCD1234");
-    usuario1.setNome("teste");
-    usuario1.setSenha("A1234B");
-    cout << usuario1.getMatricula() << endl;
-    cout << usuario1.getNome() << endl;
-    cout << usuario1.getSenha() << endl;
+    usuario1.setMatricula(mat1);
+    usuario1.setNome(nome1);
+    usuario1.setSenha(senha1);
 
     return 0;
 }

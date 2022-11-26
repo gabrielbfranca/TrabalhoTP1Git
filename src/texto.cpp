@@ -7,3 +7,4 @@ void Texto::setTexto(string texto) {
 Texto::Texto() {
     this->texto = "";
 };
+
