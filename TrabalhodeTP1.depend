@@ -54,44 +54,54 @@
 
 1668401870 c:\users\brave\documents\github\trabalhotp1git\entidades.h
 
-1668402869 source:c:\users\brave\documents\github\trabalhotp1git\main.cpp
+1669364930 source:c:\users\brave\documents\github\trabalhotp1git\main.cpp
 	<iostream>
 	"codigo.h"
+	"data.h"
+	"matricula.h"
+	"nome.h"
+	"senha.h"
+	"texto.h"
+	"disciplina.h"
+	"usuario.h"
 
-1668403130 c:\users\brave\documents\github\trabalhotp1git\include\codigo.h
+1669365167 c:\users\brave\documents\github\trabalhotp1git\include\codigo.h
 	<string>
 
-1668403336 source:c:\users\brave\documents\github\trabalhotp1git\src\codigo.cpp
+1669365246 source:c:\users\brave\documents\github\trabalhotp1git\src\codigo.cpp
+	<regex>
 	"codigo.h"
 
-1668403347 source:c:\users\brave\documents\github\trabalhotp1git\src\data.cpp
+1669365215 source:c:\users\brave\documents\github\trabalhotp1git\src\data.cpp
 	"data.h"
 
-1668403194 c:\users\brave\documents\github\trabalhotp1git\include\data.h
+1669365278 c:\users\brave\documents\github\trabalhotp1git\include\data.h
 	<string>
 
-1668403646 source:c:\users\brave\documents\github\trabalhotp1git\src\matricula.cpp
+1669365369 source:c:\users\brave\documents\github\trabalhotp1git\src\matricula.cpp
+	<regex>
 	"matricula.h"
 
-1668403511 c:\users\brave\documents\github\trabalhotp1git\include\matricula.h
+1669365379 c:\users\brave\documents\github\trabalhotp1git\include\matricula.h
 	<string>
 
-1668403825 source:c:\users\brave\documents\github\trabalhotp1git\src\nome.cpp
+1669365391 source:c:\users\brave\documents\github\trabalhotp1git\src\nome.cpp
 	"nome.h"
 
-1668403786 c:\users\brave\documents\github\trabalhotp1git\include\nome.h
+1669365400 c:\users\brave\documents\github\trabalhotp1git\include\nome.h
 	<string>
 
-1668404182 source:c:\users\brave\documents\github\trabalhotp1git\src\senha.cpp
+1669365412 source:c:\users\brave\documents\github\trabalhotp1git\src\senha.cpp
 	"senha.h"
+	<regex>
 
-1668404132 c:\users\brave\documents\github\trabalhotp1git\include\senha.h
+1669365422 c:\users\brave\documents\github\trabalhotp1git\include\senha.h
 	<string>
 
-1668404316 source:c:\users\brave\documents\github\trabalhotp1git\src\texto.cpp
+1669504673 source:c:\users\brave\documents\github\trabalhotp1git\src\texto.cpp
 	"texto.h"
 
-1668404393 c:\users\brave\documents\github\trabalhotp1git\include\texto.h
+1669365439 c:\users\brave\documents\github\trabalhotp1git\include\texto.h
 	<string>
 
 1668655906 f:\projetos\trabalhotp1git\include\codigo.h
@@ -148,4 +158,20 @@
 	"nome.h"
 	"matricula.h"
 	"senha.h"
+
+1669365318 c:\users\brave\documents\github\trabalhotp1git\include\disciplina.h
+	<string>
+
+1669505562 c:\users\brave\documents\github\trabalhotp1git\include\usuario.h
+	"nome.h"
+	"matricula.h"
+	"senha.h"
+
+1669365328 source:c:\users\brave\documents\github\trabalhotp1git\src\disciplina.cpp
+	"disciplina.h"
+	<set>
+	<stdexcept>
+
+1669505522 source:c:\users\brave\documents\github\trabalhotp1git\src\usuario.cpp
+	"usuario.h"
 

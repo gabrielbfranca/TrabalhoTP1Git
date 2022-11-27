@@ -15,4 +15,8 @@ class Codigo {
 
 };
 
+inline string Codigo::getCodigo(){
+    return this->codigo;
+}
+
 #endif // CODIGO_H

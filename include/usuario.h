@@ -16,13 +16,37 @@ class Usuario
 
     public:
         Usuario();
-        void setNome(string);
-        void setMatricula(string);
-        void setSenha(string);
-        string getNome();
-        string getMatricula();
-        string getSenha();
+        void setNome(const Nome&);
+        void setMatricula(const Matricula&);
+        void setSenha(const Senha&);
+        Nome getNome() const;
+        Matricula getMatricula() const;
+        Senha getSenha() const;
 
+};
+
+inline Nome Usuario::getNome() const{
+    return nome;
+};
+
+inline Matricula Usuario::getMatricula() const{
+    return matricula;
+};
+
+inline Senha Usuario::getSenha() const{
+    return senha;
+};
+
+inline void Usuario::setNome(const Nome& nome){
+    this->nome = nome;
+};
+
+inline void Usuario::setMatricula(const Matricula& matricula){
+    this->matricula = matricula;
+};
+
+inline void Usuario::setSenha(const Senha& senha){
+    this->senha = senha;
 };
 
 #endif // USUARIO_H

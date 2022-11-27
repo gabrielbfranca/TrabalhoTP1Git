@@ -15,4 +15,8 @@ class Nome {
 
 };
 
+inline string Nome::getNome() {
+    return nome;
+};
+
 #endif // NOME_H

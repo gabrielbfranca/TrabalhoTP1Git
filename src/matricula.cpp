@@ -13,9 +13,6 @@ void Matricula::validar(string matricula) {
         throw invalid_argument("Matrícula inválida. Formato deve ser LLLLDDDD L sendo letra maíscula e D sendo digito");
     }
 };
-string Matricula::getMatricula() {
-    return matricula;
-};
 
 Matricula::Matricula() {
     this->matricula = "";
