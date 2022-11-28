@@ -129,8 +129,9 @@
 	<regex>
 	"codigo.h"
 
-1668710514 source:f:\projetos\trabalhotp1git\src\data.cpp
+1669127306 source:f:\projetos\trabalhotp1git\src\data.cpp
 	"data.h"
+	<regex>
 
 1668874913 source:f:\projetos\trabalhotp1git\src\disciplina.cpp
 	"disciplina.h"
