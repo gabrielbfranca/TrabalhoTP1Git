@@ -1,11 +1,9 @@
-#include "Tarefa.h"
+#include "tarefa.h"
 
-Tarefa::Tarefa()
-{
-    //ctor
-}
-
-Tarefa::~Tarefa()
-{
-    //dtor
+Tarefa::Tarefa(){
+    nome = Texto();
+    codigo = Codigo();
+    inicio = Data();
+    termino = Data();
+    disciplina = Disciplina();
 }
