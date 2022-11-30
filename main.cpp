@@ -8,6 +8,7 @@
 #include "texto.h"
 #include "disciplina.h"
 #include "usuario.h"
+#include "tarefa.h"
 
 
 using namespace std;
@@ -68,6 +69,14 @@ int main()
     usuario1.setMatricula(mat1);
     usuario1.setNome(nome1);
     usuario1.setSenha(senha1);
+
+    // teste de entidade Tarefa
+    Tarefa tarefa1;
+    tarefa1.setNome(texto1);
+    tarefa1.setCodigo(code1);
+    tarefa1.setInicio(data1);
+    tarefa1.setTermino(data1);
+    tarefa1.setDisciplina(disc1);
 
     return 0;
 }
