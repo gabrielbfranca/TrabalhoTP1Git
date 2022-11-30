@@ -1,82 +1,97 @@
 #include <iostream>
 
-#include "codigo.h"
-#include "data.h"
-#include "matricula.h"
-#include "nome.h"
-#include "senha.h"
-#include "texto.h"
-#include "disciplina.h"
-#include "usuario.h"
-#include "tarefa.h"
-
+#include "testes.h"
 
 using namespace std;
 
 int main()
 {
-    // teste do dominio Codigo
-    Codigo code1;
-    code1.setCodigo("12345678917");
-    cout << code1.getCodigo() << endl;
+    // teste dominio Codigo
+    TUCodigo tuCodigo;
 
-    cout << "" << endl;
+    if (tuCodigo.run())
+        cout << "SUCESSO - DOMINIO CODIGO" << endl;
+    else
+        cout << "FALHA - DOMINIO CODIGO" << endl;
 
-    // teste de dominio Data (incompleto)
-    Data data1;
-    data1.setData("data");
-    cout << data1.getData() << endl;
 
-    cout << "" << endl;
+    // teste dominio Data
+    TUData tuData;
 
-    // teste de dominio Disciplina
-    Disciplina disc1;
-    disc1.setDisciplina("Arquitetura");
-    cout << disc1.getDisciplina() << endl;
+    if (tuData.run())
+        cout << "SUCESSO - DOMINIO DATA" << endl;
+    else
+        cout << "FALHA - DOMINIO DATA" << endl;
 
-    cout << "" << endl;
 
-    // teste de dominio Matricula
-    Matricula mat1;
-    mat1.setMatricula("ABCD1234");
-    cout << mat1.getMatricula() << endl;
+    // teste dominio Disciplina
+    TUDisciplina tuDisc;
 
-    cout << "" << endl;
+    if (tuDisc.run())
+        cout << "SUCESSO - DOMINIO DISCIPLINA" << endl;
+    else
+        cout << "FALHA - DOMINIO DISCIPLINA" << endl;
 
-    // teste de dominio Nome (incompleto)
-    Nome nome1;
-    nome1.setNome("nome");
-    cout << nome1.getNome() << endl;
 
-    cout << "" << endl;
+    // teste dominio Matricula
+    TUMatricula tuMat;
 
-    // teste de dominio Senha
-    Senha senha1;
-    senha1.setSenha("1234AB");
-    cout << senha1.getSenha() << endl;
+    if (tuMat.run())
+        cout << "SUCESSO - DOMINIO MATRICULA" << endl;
+    else
+        cout << "FALHA - DOMINIO MATRICULA" << endl;
 
-    cout << "" << endl;
 
-    // teste de dominio Texto (incompleto)
-    Texto texto1;
-    texto1.setTexto("texto");
-    cout << texto1.getTexto() << endl;
+    // teste dominio Nome
+    TUNome tuNome;
 
-    cout << "" << endl;
+    if (tuNome.run())
+        cout << "SUCESSO - DOMINIO NOME" << endl;
+    else
+        cout << "FALHA - DOMINIO NOME" << endl;
 
-    // teste de entidade Usuario
-    Usuario usuario1;
-    usuario1.setMatricula(mat1);
-    usuario1.setNome(nome1);
-    usuario1.setSenha(senha1);
 
-    // teste de entidade Tarefa
-    Tarefa tarefa1;
-    tarefa1.setNome(texto1);
-    tarefa1.setCodigo(code1);
-    tarefa1.setInicio(data1);
-    tarefa1.setTermino(data1);
-    tarefa1.setDisciplina(disc1);
+    // teste dominio Senha
+    TUSenha tuSenha;
 
-    return 0;
+    if (tuSenha.run())
+        cout << "SUCESSO - DOMINIO SENHA" << endl;
+    else
+        cout << "FALHA - DOMINIO SENHA" << endl;
+
+
+    // teste dominio Texto
+    TUTexto tuTexto;
+
+    if (tuTexto.run())
+        cout << "SUCESSO - DOMINIO TEXTO" << endl;
+    else
+        cout << "FALHA - DOMINIO TEXTO" << endl;
+
+
+    // teste entidade Usuario
+    TUUsuario tuUser;
+
+    if (tuUser.run())
+        cout << "SUCESSO - ENTIDADE USUARIO" << endl;
+    else
+        cout << "FALHA - ENTIDADE USUARIO" << endl;
+
+
+    // teste entidade Usuario
+    TUTarefa tuTarefa;
+
+    if (tuTarefa.run())
+        cout << "SUCESSO - ENTIDADE TAREFA" << endl;
+    else
+        cout << "FALHA - ENTIDADE TAREFA" << endl;
+
+
+    // teste entidade Usuario
+    TUProjeto tuProjeto;
+
+    if (tuProjeto.run())
+        cout << "SUCESSO - ENTIDADE PROJETO" << endl;
+    else
+        cout << "FALHA - ENTIDADE PROJETO" << endl;
 }

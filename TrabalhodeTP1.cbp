@@ -42,6 +42,7 @@
 		<Unit filename="include/nome.h" />
 		<Unit filename="include/projeto.h" />
 		<Unit filename="include/senha.h" />
+		<Unit filename="include/testes.h" />
 		<Unit filename="include/texto.h" />
 		<Unit filename="include/usuario.h" />
 		<Unit filename="main.cpp" />
@@ -53,6 +54,7 @@
 		<Unit filename="src/nome.cpp" />
 		<Unit filename="src/projeto.cpp" />
 		<Unit filename="src/senha.cpp" />
+		<Unit filename="src/testes.cpp" />
 		<Unit filename="src/texto.cpp" />
 		<Unit filename="src/usuario.cpp" />
 		<Extensions />

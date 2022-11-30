@@ -54,16 +54,9 @@
 
 1668401870 c:\users\brave\documents\github\trabalhotp1git\entidades.h
 
-1669364930 source:c:\users\brave\documents\github\trabalhotp1git\main.cpp
+1669825046 source:c:\users\brave\documents\github\trabalhotp1git\main.cpp
 	<iostream>
-	"codigo.h"
-	"data.h"
-	"matricula.h"
-	"nome.h"
-	"senha.h"
-	"texto.h"
-	"disciplina.h"
-	"usuario.h"
+	"testes.h"
 
 1669365167 c:\users\brave\documents\github\trabalhotp1git\include\codigo.h
 	<string>
@@ -72,8 +65,9 @@
 	<regex>
 	"codigo.h"
 
-1669365215 source:c:\users\brave\documents\github\trabalhotp1git\src\data.cpp
+1669815369 source:c:\users\brave\documents\github\trabalhotp1git\src\data.cpp
 	"data.h"
+	<regex>
 
 1669365278 c:\users\brave\documents\github\trabalhotp1git\include\data.h
 	<string>
@@ -182,4 +176,35 @@
 1669576242 f:\projetos\trabalhotp1git\include\projeto.h
 	"texto.h"
 	"codigo.h"
+
+1669815369 source:c:\users\brave\documents\github\trabalhotp1git\src\projeto.cpp
+	"projeto.h"
+
+1669815369 c:\users\brave\documents\github\trabalhotp1git\include\projeto.h
+	"texto.h"
+	"codigo.h"
+
+1669661239 source:c:\users\brave\documents\github\trabalhotp1git\src\tarefa.cpp
+	"tarefa.h"
+
+1669661457 c:\users\brave\documents\github\trabalhotp1git\include\tarefa.h
+	"texto.h"
+	"codigo.h"
+	"data.h"
+	"disciplina.h"
+
+1669825087 source:c:\users\brave\documents\github\trabalhotp1git\src\testes.cpp
+	"testes.h"
+
+1669825069 c:\users\brave\documents\github\trabalhotp1git\include\testes.h
+	"codigo.h"
+	"data.h"
+	"disciplina.h"
+	"matricula.h"
+	"nome.h"
+	"senha.h"
+	"texto.h"
+	"usuario.h"
+	"tarefa.h"
+	"projeto.h"
 
