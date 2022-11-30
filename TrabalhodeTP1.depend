@@ -20,7 +20,7 @@
 1668350206 source:f:\projetos\trabalhotp1git\entidades.cpp
 	"entidades.h"
 
-1668710426 source:f:\projetos\trabalhotp1git\main.cpp
+1669565637 source:f:\projetos\trabalhotp1git\main.cpp
 	<iostream>
 	"codigo.h"
 	"data.h"
@@ -104,57 +104,58 @@
 1669365439 c:\users\brave\documents\github\trabalhotp1git\include\texto.h
 	<string>
 
-1668655906 f:\projetos\trabalhotp1git\include\codigo.h
+1669565637 f:\projetos\trabalhotp1git\include\codigo.h
 	<string>
 
-1668655906 f:\projetos\trabalhotp1git\include\data.h
+1669565637 f:\projetos\trabalhotp1git\include\data.h
 	<string>
 
-1668655906 f:\projetos\trabalhotp1git\include\matricula.h
+1669565637 f:\projetos\trabalhotp1git\include\matricula.h
 	<string>
 
-1668655906 f:\projetos\trabalhotp1git\include\nome.h
+1669565637 f:\projetos\trabalhotp1git\include\nome.h
 	<string>
 
-1668655906 f:\projetos\trabalhotp1git\include\senha.h
+1669565637 f:\projetos\trabalhotp1git\include\senha.h
 	<string>
 
-1668655906 f:\projetos\trabalhotp1git\include\texto.h
+1669565637 f:\projetos\trabalhotp1git\include\texto.h
 	<string>
 
-1668710721 f:\projetos\trabalhotp1git\include\disciplina.h
+1669565637 f:\projetos\trabalhotp1git\include\disciplina.h
 	<string>
 
-1668867027 source:f:\projetos\trabalhotp1git\src\codigo.cpp
+1669565637 source:f:\projetos\trabalhotp1git\src\codigo.cpp
 	<regex>
 	"codigo.h"
 
-1669127306 source:f:\projetos\trabalhotp1git\src\data.cpp
+1669565796 source:f:\projetos\trabalhotp1git\src\data.cpp
 	"data.h"
 	<regex>
 
-1668874913 source:f:\projetos\trabalhotp1git\src\disciplina.cpp
+1669565637 source:f:\projetos\trabalhotp1git\src\disciplina.cpp
 	"disciplina.h"
 	<set>
 	<stdexcept>
 
-1668866993 source:f:\projetos\trabalhotp1git\src\matricula.cpp
+1669565637 source:f:\projetos\trabalhotp1git\src\matricula.cpp
 	<regex>
 	"matricula.h"
 
-1668655906 source:f:\projetos\trabalhotp1git\src\nome.cpp
+1669565637 source:f:\projetos\trabalhotp1git\src\nome.cpp
 	"nome.h"
 
-1668655906 source:f:\projetos\trabalhotp1git\src\senha.cpp
+1669565637 source:f:\projetos\trabalhotp1git\src\senha.cpp
 	"senha.h"
+	<regex>
 
-1668655906 source:f:\projetos\trabalhotp1git\src\texto.cpp
+1669565637 source:f:\projetos\trabalhotp1git\src\texto.cpp
 	"texto.h"
 
-1668655906 source:f:\projetos\trabalhotp1git\src\usuario.cpp
+1669565637 source:f:\projetos\trabalhotp1git\src\usuario.cpp
 	"usuario.h"
 
-1668655984 f:\projetos\trabalhotp1git\include\usuario.h
+1669565637 f:\projetos\trabalhotp1git\include\usuario.h
 	"nome.h"
 	"matricula.h"
 	"senha.h"
@@ -174,4 +175,11 @@
 
 1669505522 source:c:\users\brave\documents\github\trabalhotp1git\src\usuario.cpp
 	"usuario.h"
+
+1669575994 source:f:\projetos\trabalhotp1git\src\projeto.cpp
+	"projeto.h"
+
+1669576242 f:\projetos\trabalhotp1git\include\projeto.h
+	"texto.h"
+	"codigo.h"
 
