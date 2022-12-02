@@ -15,6 +15,10 @@ class Senha {
 
 };
 
+///
+/// retorna valor armazenado
+///
+
 inline string Senha::getSenha() {
     return senha;
 };

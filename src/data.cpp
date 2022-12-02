@@ -32,12 +32,24 @@ void Data::validar(string data)
         throw invalid_argument("Data invalida. Apenas datas no formato DD-MM-AA");
 }
 
+///
+/// Formato DD-MES-ANO
+/// DD - 01 a 31
+/// MES - 01 a 12
+/// ANO - 00 a 99
+/// Deve ser levado em consideracao se ano e ou nao e bissexto.
+///
+
 void Data::setData(string data)
 {
     validar(data);
 
     this->data = data;
 };
+
+///
+/// Metodo construtor
+///
 
 Data::Data()
 {

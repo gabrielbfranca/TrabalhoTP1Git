@@ -28,41 +28,81 @@ class Tarefa
         Disciplina getDisciplina() const;
 };
 
+///
+/// Retorna objeto texto armazenado
+///
+
 inline Texto Tarefa::getNome()const{
     return nome;
 }
+
+///
+/// Retorna objeto codigo armazenado
+///
 
 inline Codigo Tarefa::getCodigo()const{
     return codigo;
 }
 
+///
+/// Retorna objeto data armazenado
+///
+
 inline Data Tarefa::getInicio()const{
     return inicio;
 }
+
+///
+/// Retorna objeto data armazenado
+///
 
 inline Data Tarefa::getTermino()const{
     return termino;
 }
 
+///
+/// Retorna objeto disciplina armazenado
+///
+
 inline Disciplina Tarefa::getDisciplina()const{
     return disciplina;
 }
+
+///
+/// Armazena objeto nome
+///
 
 inline void Tarefa::setNome(const Texto& texto){
     this->nome = nome;
 }
 
+///
+/// Armazena objeto codigo
+///
+
 inline void Tarefa::setCodigo(const Codigo& codigo){
     this->codigo = codigo;
 }
+
+///
+/// Armazena objeto data
+///
 
 inline void Tarefa::setInicio(const Data& inicio){
     this->inicio = inicio;
 }
 
+///
+/// Armazena objeto data
+///
+
 inline void Tarefa::setTermino(const Data& termino){
     this->termino = termino;
 }
+
+///
+/// Armazena objeto disciplina
+///
 
 inline void Tarefa::setDisciplina(const Disciplina& disciplina){
     this->disciplina = disciplina;

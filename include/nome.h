@@ -15,6 +15,10 @@ class Nome {
 
 };
 
+///
+/// Retorna valor armazendo
+///
+
 inline string Nome::getNome() {
     return nome;
 };

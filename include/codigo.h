@@ -4,6 +4,10 @@
 
 using namespace std;
 
+///
+/// Dominio Codigo, usado nas entidades Tarefa e Projeto
+///
+
 class Codigo {
     private:
         string codigo;
@@ -14,6 +18,10 @@ class Codigo {
         Codigo();
 
 };
+
+///
+/// Metodo getCodigo, retorna o valor armazenado
+///
 
 inline string Codigo::getCodigo(){
     return this->codigo;

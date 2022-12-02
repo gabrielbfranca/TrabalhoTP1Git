@@ -15,6 +15,10 @@ class Data {
 
 };
 
+///
+/// Retorna valor armazenado
+///
+
 inline string Data::getData(){
     return this->data;
 }

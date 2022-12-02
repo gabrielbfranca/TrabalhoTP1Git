@@ -1,5 +1,9 @@
 #include "tarefa.h"
 
+///
+/// Metodo construtor
+///
+
 Tarefa::Tarefa(){
     nome = Texto();
     codigo = Codigo();

@@ -208,10 +208,9 @@
 	"tarefa.h"
 	"projeto.h"
 
-1669990691 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
+1669990903 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
 	<iostream>
 	"testes.h"
-	<regex>
 
 1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\testes.h
 	"codigo.h"
@@ -225,7 +224,7 @@
 	"tarefa.h"
 	"projeto.h"
 
-1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\codigo.h
+1669991159 c:\users\henriquelima\documents\github\trabalhotp1git\include\codigo.h
 	<string>
 
 1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\data.h
@@ -292,7 +291,7 @@
 	"testes.h"
 	<iostream>
 
-1669990489 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\texto.cpp
+1669990888 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\texto.cpp
 	"texto.h"
 	<regex>
 

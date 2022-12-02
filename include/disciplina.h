@@ -15,6 +15,9 @@ class Disciplina {
 
 };
 
+///
+/// Retorna valor armazenado
+///
 inline string Disciplina::getDisciplina(){
     return this->disciplina;
 }

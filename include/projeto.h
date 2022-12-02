@@ -22,25 +22,49 @@ class Projeto {
         Texto getDescricao() const;
 };
 
+///
+/// Retorna objeto texto armazenado
+///
+
 inline Texto Projeto::getNome() const{
     return nome;
 };
+
+///
+/// Retorna objeto codigo armazenado
+///
 
 inline Codigo Projeto::getCodigo() const{
     return codigo;
 };
 
+///
+/// Retorna objeto texto armazenado
+///
+
 inline Texto Projeto::getDescricao() const{
     return descricao;
 };
+
+///
+/// Retorna objeto texto armazenado
+///
 
 inline void Projeto::setNome(const Texto& nome){
     this->nome = nome;
 };
 
+///
+/// Retorna objeto codigo armazenado
+///
+
 inline void Projeto::setCodigo(const Codigo& codigo){
     this->codigo = codigo;
 };
+
+///
+/// Retorna objeto texto armazenado
+///
 
 inline void Projeto::setDescricao(const Texto& descricao){
     this->descricao = descricao;

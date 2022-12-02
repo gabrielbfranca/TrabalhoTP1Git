@@ -15,6 +15,10 @@ class Matricula {
 
 };
 
+///
+/// Retorna valor armazenado
+///
+
 inline string Matricula::getMatricula() {
     return this->matricula;
 };

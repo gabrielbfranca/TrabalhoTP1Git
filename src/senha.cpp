@@ -1,10 +1,22 @@
 #include "senha.h"
 #include <regex>
 
+///
+/// armazena uma senha no seguinte formato
+/// Formato XXXXXX
+/// Cada caractere X e letra maiuscula (A-Z) ou digito (0-9).
+/// Nao pode haver caractere duplicado.
+/// Existem pelo menos duas letras maiusculas e dois digitos.
+///
+
 void Senha::setSenha(string senha) {
     validar(senha);
     this->senha = senha;
 };
+
+///
+/// Metodo construtor
+///
 
 Senha::Senha() {
     this->senha = "";

@@ -25,25 +25,49 @@ class Usuario
 
 };
 
+///
+/// retorna nome armazenado
+///
+
 inline Nome Usuario::getNome() const{
     return nome;
 };
+
+///
+/// retorna matricula armazenada
+///
 
 inline Matricula Usuario::getMatricula() const{
     return matricula;
 };
 
+///
+/// retorna senha armazenada
+///
+
 inline Senha Usuario::getSenha() const{
     return senha;
 };
+
+///
+/// armazena um objeto nome
+///
 
 inline void Usuario::setNome(const Nome& nome){
     this->nome = nome;
 };
 
+///
+/// armazena um objeto matricula
+///
+
 inline void Usuario::setMatricula(const Matricula& matricula){
     this->matricula = matricula;
 };
+
+///
+/// armazena um objeto senha
+///
 
 inline void Usuario::setSenha(const Senha& senha){
     this->senha = senha;

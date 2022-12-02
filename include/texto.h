@@ -15,6 +15,10 @@ class Texto {
 
 };
 
+///
+/// retorna valor armazenado
+///
+
 inline string Texto::getTexto() const {
     return texto;
 };
