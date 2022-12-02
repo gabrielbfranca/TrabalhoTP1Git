@@ -1,5 +1,6 @@
 #include <iostream>
 #include "testes.h"
+#include <regex>
 
 using namespace std;
 
@@ -93,4 +94,17 @@ int main()
         cout << "SUCESSO - ENTIDADE PROJETO" << endl;
     else
         cout << "FALHA - ENTIDADE PROJETO" << endl;
+
+    return 0;
 }
+
+
+
+
+
+
+
+
+
+
+

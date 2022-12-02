@@ -317,29 +317,29 @@ void TUTarefa::testeSucesso(){
     Data termino;
     Disciplina disc;
 
-    try {
-        nome.setTexto("Desenvolver classe abstrata");
+    try{
+        nome.setTexto("Desenvolver classes");
         codigo.setCodigo("12345678917");
-        inicio.setData("12-12-17");
-        termino.setData("13-12-17");
+        inicio.setData("12-12-12");
+        termino.setData("12-12-13");
         disc.setDisciplina("Arquitetura");
 
-        tarefa->setCodigo(codigo);
         tarefa->setNome(nome);
+        tarefa->setCodigo(codigo);
         tarefa->setInicio(inicio);
         tarefa->setTermino(termino);
         tarefa->setDisciplina(disc);
-    } catch (...) {
+    } catch(...){
         estado = false;
     }
 
+    if (tarefa->getNome().getTexto() != "Desenvolver classes")
+        estado = false;
     if (tarefa->getCodigo().getCodigo() != "12345678917")
         estado = false;
-    if (tarefa->getNome().getTexto() != "Jose Silva Souza")
+    if (tarefa->getInicio().getData() != "12-12-12")
         estado = false;
-    if (tarefa->getInicio().getData() != "12-12-17")
-        estado = false;
-    if (tarefa->getTermino().getData() != "13-12-17")
+    if (tarefa->getTermino().getData() != "12-12-13")
         estado = false;
     if (tarefa->getDisciplina().getDisciplina() != "Arquitetura")
         estado = false;

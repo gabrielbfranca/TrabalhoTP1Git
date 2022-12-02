@@ -73,7 +73,7 @@ inline Disciplina Tarefa::getDisciplina()const{
 ///
 
 inline void Tarefa::setNome(const Texto& texto){
-    this->nome = nome;
+    this->nome = texto;
 }
 
 ///
@@ -104,8 +104,8 @@ inline void Tarefa::setTermino(const Data& termino){
 /// Armazena objeto disciplina
 ///
 
-inline void Tarefa::setDisciplina(const Disciplina& disciplina){
-    this->disciplina = disciplina;
+inline void Tarefa::setDisciplina(const Disciplina& disc){
+    this->disciplina = disc;
 }
 
 #endif // TAREFA_H
