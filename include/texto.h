@@ -10,12 +10,12 @@ class Texto {
         void validar(string);
     public:
         void setTexto(string);
-        string getTexto();
+        string getTexto() const;
         Texto();
 
 };
 
-inline string Texto::getTexto() {
+inline string Texto::getTexto() const {
     return texto;
 };
 

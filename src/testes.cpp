@@ -1,4 +1,5 @@
 #include "testes.h"
+#include <iostream>
 
 void TUCodigo::setUp(){
     codigo = new Codigo();
@@ -233,8 +234,8 @@ void TUTexto::tearDown(){
 
 void TUTexto::testeSucesso(){
     try{
-        texto->setTexto("1ABCD2");
-        if (texto->getTexto() != "1ABCD2")
+        texto->setTexto("bla bla bla bla");
+        if (texto->getTexto() != "bla bla bla bla")
             estado = false;
     } catch (...){
         estado = false;
@@ -243,10 +244,10 @@ void TUTexto::testeSucesso(){
 
 void TUTexto::testeFalha(){
     try{
-        texto->setTexto("123456");
+        texto->setTexto("bla");
         estado = false;
     } catch (...) {
-        if (texto->getTexto() == "123456")
+        if (texto->getTexto() == "bla")
             estado = false;
     }
 }

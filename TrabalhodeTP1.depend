@@ -208,9 +208,10 @@
 	"tarefa.h"
 	"projeto.h"
 
-1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
+1669990691 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
 	<iostream>
 	"testes.h"
+	<regex>
 
 1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\testes.h
 	"codigo.h"
@@ -242,7 +243,7 @@
 1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\senha.h
 	<string>
 
-1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\texto.h
+1669990099 c:\users\henriquelima\documents\github\trabalhotp1git\include\texto.h
 	<string>
 
 1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\usuario.h
@@ -264,7 +265,7 @@
 	<regex>
 	"codigo.h"
 
-1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\data.cpp
+1669989759 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\data.cpp
 	"data.h"
 	<regex>
 
@@ -287,12 +288,18 @@
 1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\tarefa.cpp
 	"tarefa.h"
 
-1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\testes.cpp
+1669990444 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\testes.cpp
 	"testes.h"
+	<iostream>
 
-1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\texto.cpp
+1669990489 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\texto.cpp
 	"texto.h"
+	<regex>
 
 1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\usuario.cpp
 	"usuario.h"
+
+1669988990 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\nome.cpp
+	"nome.h"
+	<regex>
 

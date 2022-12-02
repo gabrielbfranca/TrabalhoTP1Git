@@ -4,7 +4,7 @@
 void Data::validar(string data)
 {
 
-    regex data_modelo("(0[1-9]|[1-2][0-9]|3[0-1])-(0[1-9]|[1][0-2])-(2[1-9]|[3-9][0-9])");
+    regex data_modelo("(0[1-9]\[1-2][0-9]\3[0-1])-(0[1-9]\[1][0-2])-(2[1-9]\[3-9][0-9])");
     bool data_valida = regex_match(data, data_modelo);
 
 
