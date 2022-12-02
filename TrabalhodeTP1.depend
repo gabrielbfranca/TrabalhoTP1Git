@@ -208,3 +208,91 @@
 	"tarefa.h"
 	"projeto.h"
 
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
+	<iostream>
+	"testes.h"
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\testes.h
+	"codigo.h"
+	"data.h"
+	"disciplina.h"
+	"matricula.h"
+	"nome.h"
+	"senha.h"
+	"texto.h"
+	"usuario.h"
+	"tarefa.h"
+	"projeto.h"
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\codigo.h
+	<string>
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\data.h
+	<string>
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\disciplina.h
+	<string>
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\matricula.h
+	<string>
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\nome.h
+	<string>
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\senha.h
+	<string>
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\texto.h
+	<string>
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\usuario.h
+	"nome.h"
+	"matricula.h"
+	"senha.h"
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\tarefa.h
+	"texto.h"
+	"codigo.h"
+	"data.h"
+	"disciplina.h"
+
+1669987959 c:\users\henriquelima\documents\github\trabalhotp1git\include\projeto.h
+	"texto.h"
+	"codigo.h"
+
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\codigo.cpp
+	<regex>
+	"codigo.h"
+
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\data.cpp
+	"data.h"
+	<regex>
+
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\disciplina.cpp
+	"disciplina.h"
+	<set>
+	<stdexcept>
+
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\matricula.cpp
+	<regex>
+	"matricula.h"
+
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\projeto.cpp
+	"projeto.h"
+
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\senha.cpp
+	"senha.h"
+	<regex>
+
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\tarefa.cpp
+	"tarefa.h"
+
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\testes.cpp
+	"testes.h"
+
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\texto.cpp
+	"texto.h"
+
+1669987959 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\usuario.cpp
+	"usuario.h"
+
