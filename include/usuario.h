@@ -7,6 +7,8 @@
 
 using namespace std;
 
+// Classe Usuario feita por Henrique Valente Mat: 211055380
+
 class Usuario
 {
     private:

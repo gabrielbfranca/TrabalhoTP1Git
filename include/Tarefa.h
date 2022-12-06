@@ -6,6 +6,8 @@
 #include "data.h"
 #include "disciplina.h"
 
+// Classe Tarefa feita por Henrique Valente Mat: 211055380
+
 class Tarefa
 {
     private:

@@ -12,6 +12,8 @@
 #include "tarefa.h"
 #include "projeto.h"
 
+// Classe TUCodigo feita por Henrique Valente Mat: 211055380
+
 class TUCodigo
 {
     private:
@@ -26,6 +28,7 @@ class TUCodigo
 
 };
 
+// Classe TUData feita por Henrique Valente Mat: 211055380
 class TUData
 {
     private:
@@ -39,6 +42,7 @@ class TUData
         bool run();
 };
 
+// Classe TUDisciplina feita por Henrique Valente Mat: 211055380
 class TUDisciplina
 {
     private:
@@ -51,6 +55,8 @@ class TUDisciplina
     public:
         bool run();
 };
+
+// Classe TUMAtricula feita por Henrique Valente Mat: 211055380
 
 class TUMatricula
 {
@@ -65,6 +71,8 @@ class TUMatricula
         bool run();
 };
 
+// Classe TUNome feita por Henrique Valente Mat: 211055380
+
 class TUNome
 {
     private:
@@ -77,6 +85,8 @@ class TUNome
     public:
         bool run();
 };
+
+// Classe TUSenha feita por Henrique Valente Mat: 211055380
 class TUSenha
 {
     private:
@@ -89,6 +99,8 @@ class TUSenha
     public:
         bool run();
 };
+
+// Classe TUTexto feita por Henrique Valente Mat: 211055380
 
 class TUTexto
 {
@@ -103,6 +115,8 @@ class TUTexto
         bool run();
 };
 
+// Classe TUUsuario feita por Henrique Valente Mat: 211055380
+
 class TUUsuario{
     private:
         Usuario *usuario;
@@ -114,6 +128,8 @@ class TUUsuario{
         bool run();
 };
 
+// Classe TUTarefa feita por Henrique Valente Mat: 211055380
+
 class TUTarefa{
     private:
         Tarefa *tarefa;
@@ -124,6 +140,8 @@ class TUTarefa{
     public:
         bool run();
 };
+
+// Classe TUProjeto feita por Henrique Valente Mat: 211055380
 
 class TUProjeto{
     private:

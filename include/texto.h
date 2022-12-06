@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// Classe Texto feita por Henrique Valente Mat: 211055380
+
 class Texto {
     private:
         string texto;
