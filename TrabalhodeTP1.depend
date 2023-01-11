@@ -208,7 +208,7 @@
 	"tarefa.h"
 	"projeto.h"
 
-1673450340 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
+1673452474 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
 	<iostream>
 	"testes.h"
 	<regex>
@@ -304,10 +304,19 @@
 1673442358 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\entidades.cpp
 	"entidades.h"
 
-1673450332 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\builders.cpp
+1673452453 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\builders.cpp
 	"builders.h"
 	<iostream>
 	<string>
 
-1673450161 c:\users\henriquelima\documents\github\trabalhotp1git\include\builders.h
+1673452276 c:\users\henriquelima\documents\github\trabalhotp1git\include\builders.h
+	"controladores.h"
+
+1673452524 c:\users\henriquelima\documents\github\trabalhotp1git\include\controladores.h
+
+1673452466 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\controladores.cpp
+	"controladores.h"
+	<conio.h>
+	<iostream>
+	<string.h>
 

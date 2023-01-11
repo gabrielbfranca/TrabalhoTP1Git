@@ -10,16 +10,10 @@ int main()
 {
     Builder *builder;
     builder = new Builder();
-    builder->executar();
+
+    Controlador *controlador;
+    controlador = builder->construir();
+    controlador->executar();
+
+    delete builder;
 }
-
-
-
-
-
-
-
-
-
-
-

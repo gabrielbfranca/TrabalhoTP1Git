@@ -4,12 +4,13 @@
 
 using namespace std;
 
-Builder::Builder()
+Builder::~Builder()
 {
-    //ctor
+    delete controlador;
 }
 
-void Builder::executar()
+Controlador* Builder::construir()
 {
-    cout << "Executando..." << endl;
+    controlador = new Controlador();
+    return controlador;
 }
