@@ -1,16 +1,8 @@
 #ifndef TESTES_H
 #define TESTES_H
 
-#include "codigo.h"
-#include "data.h"
-#include "disciplina.h"
-#include "matricula.h"
-#include "nome.h"
-#include "senha.h"
-#include "texto.h"
-#include "usuario.h"
-#include "tarefa.h"
-#include "projeto.h"
+#include "dominios.h"
+#include "entidades.h"
 
 // Classe TUCodigo feita por Henrique Valente Mat: 211055380
 

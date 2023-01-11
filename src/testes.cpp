@@ -12,8 +12,8 @@ void TUCodigo::tearDown(){
 
 void TUCodigo::testeSucesso(){
     try{
-        codigo->setCodigo("12345678917");
-        if (codigo->getCodigo() != "12345678917")
+        codigo->setValor("12345678917");
+        if (codigo->getValor() != "12345678917")
             estado = false;
     } catch (...){
         estado = false;
@@ -22,10 +22,10 @@ void TUCodigo::testeSucesso(){
 
 void TUCodigo::testeFalha(){
     try{
-        codigo->setCodigo("12345678910");
+        codigo->setValor("12345678910");
         estado = false;
     } catch (...) {
-        if (codigo->getCodigo() == "12345678910")
+        if (codigo->getValor() == "12345678910")
             estado = false;
     }
 }
@@ -49,8 +49,8 @@ void TUData::tearDown(){
 
 void TUData::testeSucesso(){
     try{
-        data->setData("12-12-12");
-        if (data->getData() != "12-12-12")
+        data->setValor("12-12-12");
+        if (data->getValor() != "12-12-12")
             estado = false;
     } catch (...){
         estado = false;
@@ -59,10 +59,10 @@ void TUData::testeSucesso(){
 
 void TUData::testeFalha(){
     try{
-        data->setData("32-13-15");
+        data->setValor("32-13-15");
         estado = false;
     } catch (...) {
-        if (data->getData() == "32-13-15")
+        if (data->getValor() == "32-13-15")
             estado = false;
     }
 }
@@ -86,8 +86,8 @@ void TUDisciplina::tearDown(){
 
 void TUDisciplina::testeSucesso(){
     try{
-        disc->setDisciplina("Desenvolvimento");
-        if (disc->getDisciplina() != "Desenvolvimento")
+        disc->setValor("Desenvolvimento");
+        if (disc->getValor() != "Desenvolvimento")
             estado = false;
     } catch (...){
         estado = false;
@@ -96,10 +96,10 @@ void TUDisciplina::testeSucesso(){
 
 void TUDisciplina::testeFalha(){
     try{
-        disc->setDisciplina("Tecnicas de programacao 1");
+        disc->setValor("Tecnicas de programacao 1");
         estado = false;
     } catch (...) {
-        if (disc->getDisciplina() == "Tecnicas de programacao 1")
+        if (disc->getValor() == "Tecnicas de programacao 1")
             estado = false;
     }
 }
@@ -123,8 +123,8 @@ void TUMatricula::tearDown(){
 
 void TUMatricula::testeSucesso(){
     try{
-        mat->setMatricula("ABCD1234");
-        if (mat->getMatricula() != "ABCD1234")
+        mat->setValor("ABCD1234");
+        if (mat->getValor() != "ABCD1234")
             estado = false;
     } catch (...){
         estado = false;
@@ -133,10 +133,10 @@ void TUMatricula::testeSucesso(){
 
 void TUMatricula::testeFalha(){
     try{
-        mat->setMatricula("12345678");
+        mat->setValor("12345678");
         estado = false;
     } catch (...) {
-        if (mat->getMatricula() == "12345678")
+        if (mat->getValor() == "12345678")
             estado = false;
     }
 }
@@ -160,8 +160,8 @@ void TUNome::tearDown(){
 
 void TUNome::testeSucesso(){
     try{
-        nome->setNome("Jose Silva Souza");
-        if (nome->getNome() != "Jose Silva Souza")
+        nome->setValor("Jose Silva Souza");
+        if (nome->getValor() != "Jose Silva Souza")
             estado = false;
     } catch (...){
         estado = false;
@@ -170,10 +170,10 @@ void TUNome::testeSucesso(){
 
 void TUNome::testeFalha(){
     try{
-        nome->setNome("Cleiton");
+        nome->setValor("Cleiton");
         estado = false;
     } catch (...) {
-        if (nome->getNome() == "Cleiton")
+        if (nome->getValor() == "Cleiton")
             estado = false;
     }
 }
@@ -197,8 +197,8 @@ void TUSenha::tearDown(){
 
 void TUSenha::testeSucesso(){
     try{
-        senha->setSenha("1ABCD2");
-        if (senha->getSenha() != "1ABCD2")
+        senha->setValor("1ABCD2");
+        if (senha->getValor() != "1ABCD2")
             estado = false;
     } catch (...){
         estado = false;
@@ -207,10 +207,10 @@ void TUSenha::testeSucesso(){
 
 void TUSenha::testeFalha(){
     try{
-        senha->setSenha("123456");
+        senha->setValor("123456");
         estado = false;
     } catch (...) {
-        if (senha->getSenha() == "123456")
+        if (senha->getValor() == "123456")
             estado = false;
     }
 }
@@ -234,8 +234,8 @@ void TUTexto::tearDown(){
 
 void TUTexto::testeSucesso(){
     try{
-        texto->setTexto("bla bla bla bla");
-        if (texto->getTexto() != "bla bla bla bla")
+        texto->setValor("bla bla bla bla");
+        if (texto->getValor() != "bla bla bla bla")
             estado = false;
     } catch (...){
         estado = false;
@@ -244,10 +244,10 @@ void TUTexto::testeSucesso(){
 
 void TUTexto::testeFalha(){
     try{
-        texto->setTexto("bla");
+        texto->setValor("bla");
         estado = false;
     } catch (...) {
-        if (texto->getTexto() == "bla")
+        if (texto->getValor() == "bla")
             estado = false;
     }
 }
@@ -275,9 +275,9 @@ void TUUsuario::testeSucesso(){
     Senha senha;
 
     try {
-        nome.setNome("Jose Silva Souza");
-        mat.setMatricula("ABCD1234");
-        senha.setSenha("A1B2CD");
+        nome.setValor("Jose Silva Souza");
+        mat.setValor("ABCD1234");
+        senha.setValor("A1B2CD");
 
         usuario->setMatricula(mat);
         usuario->setNome(nome);
@@ -286,11 +286,11 @@ void TUUsuario::testeSucesso(){
         estado = false;
     }
 
-    if (usuario->getMatricula().getMatricula() != "ABCD1234")
+    if (usuario->getMatricula().getValor() != "ABCD1234")
         estado = false;
-    if (usuario->getNome().getNome() != "Jose Silva Souza")
+    if (usuario->getNome().getValor() != "Jose Silva Souza")
         estado = false;
-    if (usuario->getSenha().getSenha() != "A1B2CD")
+    if (usuario->getSenha().getValor() != "A1B2CD")
         estado = false;
 }
 
@@ -318,11 +318,11 @@ void TUTarefa::testeSucesso(){
     Disciplina disc;
 
     try{
-        nome.setTexto("Desenvolver classes");
-        codigo.setCodigo("12345678917");
-        inicio.setData("12-12-12");
-        termino.setData("12-12-13");
-        disc.setDisciplina("Arquitetura");
+        nome.setValor("Desenvolver classes");
+        codigo.setValor("12345678917");
+        inicio.setValor("12-12-12");
+        termino.setValor("12-12-13");
+        disc.setValor("Arquitetura");
 
         tarefa->setNome(nome);
         tarefa->setCodigo(codigo);
@@ -333,15 +333,15 @@ void TUTarefa::testeSucesso(){
         estado = false;
     }
 
-    if (tarefa->getNome().getTexto() != "Desenvolver classes")
+    if (tarefa->getNome().getValor() != "Desenvolver classes")
         estado = false;
-    if (tarefa->getCodigo().getCodigo() != "12345678917")
+    if (tarefa->getCodigo().getValor() != "12345678917")
         estado = false;
-    if (tarefa->getInicio().getData() != "12-12-12")
+    if (tarefa->getInicio().getValor() != "12-12-12")
         estado = false;
-    if (tarefa->getTermino().getData() != "12-12-13")
+    if (tarefa->getTermino().getValor() != "12-12-13")
         estado = false;
-    if (tarefa->getDisciplina().getDisciplina() != "Arquitetura")
+    if (tarefa->getDisciplina().getValor() != "Arquitetura")
         estado = false;
 }
 
@@ -367,9 +367,9 @@ void TUProjeto::testeSucesso(){
     Texto descricao;
 
     try {
-        nome.setTexto("texto valido");
-        codigo.setCodigo("12345678917");
-        descricao.setTexto("texto valido");
+        nome.setValor("texto valido");
+        codigo.setValor("12345678917");
+        descricao.setValor("texto valido");
 
         projeto->setNome(nome);
         projeto->setCodigo(codigo);
@@ -378,11 +378,11 @@ void TUProjeto::testeSucesso(){
         estado = false;
     }
 
-    if (projeto->getNome().getTexto() != "texto valido")
+    if (projeto->getNome().getValor() != "texto valido")
         estado = false;
-    if (projeto->getCodigo().getCodigo() != "12345678917")
+    if (projeto->getCodigo().getValor() != "12345678917")
         estado = false;
-    if (projeto->getDescricao().getTexto() != "texto valido")
+    if (projeto->getDescricao().getValor() != "texto valido")
         estado = false;
 }
 
