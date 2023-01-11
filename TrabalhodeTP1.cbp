@@ -34,29 +34,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Tarefa.h" />
-		<Unit filename="include/codigo.h" />
-		<Unit filename="include/data.h" />
-		<Unit filename="include/disciplina.h" />
-		<Unit filename="include/matricula.h" />
-		<Unit filename="include/nome.h" />
-		<Unit filename="include/projeto.h" />
-		<Unit filename="include/senha.h" />
+		<Unit filename="include/dominios.h" />
+		<Unit filename="include/entidades.h" />
 		<Unit filename="include/testes.h" />
-		<Unit filename="include/texto.h" />
-		<Unit filename="include/usuario.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Tarefa.cpp" />
-		<Unit filename="src/codigo.cpp" />
-		<Unit filename="src/data.cpp" />
-		<Unit filename="src/disciplina.cpp" />
-		<Unit filename="src/matricula.cpp" />
-		<Unit filename="src/nome.cpp" />
-		<Unit filename="src/projeto.cpp" />
-		<Unit filename="src/senha.cpp" />
+		<Unit filename="src/dominios.cpp" />
+		<Unit filename="src/entidades.cpp" />
 		<Unit filename="src/testes.cpp" />
-		<Unit filename="src/texto.cpp" />
-		<Unit filename="src/usuario.cpp" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />
