@@ -208,10 +208,11 @@
 	"tarefa.h"
 	"projeto.h"
 
-1673448371 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
+1673450340 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
 	<iostream>
 	"testes.h"
 	<regex>
+	"builders.h"
 
 1673442392 c:\users\henriquelima\documents\github\trabalhotp1git\include\testes.h
 	"dominios.h"
@@ -302,4 +303,11 @@
 
 1673442358 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\entidades.cpp
 	"entidades.h"
+
+1673450332 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\builders.cpp
+	"builders.h"
+	<iostream>
+	<string>
+
+1673450161 c:\users\henriquelima\documents\github\trabalhotp1git\include\builders.h
 

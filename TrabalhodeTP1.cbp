@@ -34,13 +34,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/builders.h" />
 		<Unit filename="include/dominios.h" />
 		<Unit filename="include/entidades.h" />
-		<Unit filename="include/testes.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/builders.cpp" />
 		<Unit filename="src/dominios.cpp" />
 		<Unit filename="src/entidades.cpp" />
-		<Unit filename="src/testes.cpp" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />
