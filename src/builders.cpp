@@ -6,11 +6,11 @@ using namespace std;
 
 Builder::~Builder()
 {
-    delete controlador;
+    delete cntrApresentacaoControle;
 }
 
-Controlador* Builder::construir()
+CntrApresentacaoControle* Builder::construir()
 {
-    controlador = new Controlador();
-    return controlador;
+    cntrApresentacaoControle = new CntrApresentacaoControle();
+    return cntrApresentacaoControle;
 }

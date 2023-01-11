@@ -1,11 +1,11 @@
 #ifndef CONTROLADORES_H
 #define CONTROLADORES_H
 
-
-class Controlador
+// ---------------------------------------------------------
+// Classe controladora de apresentacao controle.
+class CntrApresentacaoControle
 {
 public:
     void executar();
 };
-
 #endif // CONTROLADORES_H

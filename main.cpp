@@ -11,9 +11,9 @@ int main()
     Builder *builder;
     builder = new Builder();
 
-    Controlador *controlador;
-    controlador = builder->construir();
-    controlador->executar();
+    CntrApresentacaoControle *cntrApresentacaoControle;
+    cntrApresentacaoControle = builder->construir();
+    cntrApresentacaoControle->executar();
 
     delete builder;
 }

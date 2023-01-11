@@ -6,9 +6,9 @@
 class Builder
 {
 private:
-    Controlador *controlador;
+    CntrApresentacaoControle *cntrApresentacaoControle;
 public:
-    Controlador* construir();
+    CntrApresentacaoControle* construir();
     ~Builder();
 };
 
