@@ -208,7 +208,7 @@
 	"tarefa.h"
 	"projeto.h"
 
-1674045770 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
+1674131769 source:c:\users\henriquelima\documents\github\trabalhotp1git\main.cpp
 	<iostream>
 	"testes.h"
 	<regex>
@@ -325,12 +325,12 @@
 	<string.h>
 	"dominios.h"
 
-1674043587 c:\users\henriquelima\documents\github\trabalhotp1git\include\interfaces.h
+1674134806 c:\users\henriquelima\documents\github\trabalhotp1git\include\interfaces.h
 	<string>
 	"dominios.h"
 	"entidades.h"
 
-1674050722 c:\users\henriquelima\documents\github\trabalhotp1git\include\controlesapresentacao.h
+1674134793 c:\users\henriquelima\documents\github\trabalhotp1git\include\controlesapresentacao.h
 	"interfaces.h"
 	"dominios.h"
 	"entidades.h"
@@ -341,11 +341,12 @@
 	"entidades.h"
 	"dominios.h"
 
-1674050741 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\controlesapresentacao.cpp
+1674134704 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\controlesapresentacao.cpp
 	"controlesApresentacao.h"
 	<iostream>
 	<stdexcept>
 	<string>
+	<conio.h>
 
 1674050925 source:c:\users\henriquelima\documents\github\trabalhotp1git\src\container.cpp
 	"container.h"

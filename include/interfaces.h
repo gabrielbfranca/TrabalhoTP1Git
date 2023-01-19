@@ -12,7 +12,7 @@ class IServicoTarefa;
 
 class IApresentacaoAutenticacao {
 public:
-    virtual bool auteticar(Matricula*) = 0;
+    virtual bool autenticar(Matricula*) = 0;
     virtual void setCntrServicoAutenticacao(IServicoAutenticacao*) = 0;
     virtual ~IApresentacaoAutenticacao(){};
 };

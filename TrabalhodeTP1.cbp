@@ -34,13 +34,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/builders.h" />
-		<Unit filename="include/controladores.h" />
+		<Unit filename="include/container.h" />
+		<Unit filename="include/controlesApresentacao.h" />
+		<Unit filename="include/controlesServico.h" />
 		<Unit filename="include/dominios.h" />
 		<Unit filename="include/entidades.h" />
+		<Unit filename="include/interfaces.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/builders.cpp" />
-		<Unit filename="src/controladores.cpp" />
+		<Unit filename="src/container.cpp" />
+		<Unit filename="src/controlesApresentacao.cpp" />
+		<Unit filename="src/controlesServico.cpp" />
 		<Unit filename="src/dominios.cpp" />
 		<Unit filename="src/entidades.cpp" />
 		<Extensions>

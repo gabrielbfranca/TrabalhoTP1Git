@@ -27,7 +27,7 @@ class CntrApresentacaoAutenticacao: public IApresentacaoAutenticacao {
 private:
     IServicoAutenticacao *cntr;
 public:
-    bool autenticar(Matricula *mat);
+    bool autenticar(Matricula *mat) override;
     void setCntrServicoAutenticacao(IServicoAutenticacao *cntr) override {this->cntr = cntr;};
 };
 
