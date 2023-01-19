@@ -10,7 +10,7 @@
 class CntrApresentacaoControle
 {
 private:
-    Matricula matricula;
+    Matricula mat;
     IApresentacaoAutenticacao *cntrApresentacaoAutenticacao;
     IApresentacaoUsuario *cntrApresentacaoUsuario;
     IApresentacaoProjeto *cntrApresentacaoProjeto;

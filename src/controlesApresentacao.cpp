@@ -14,6 +14,13 @@ void CntrApresentacaoControle::executar(){
     char texto3[] = "2 - Cadastrar usuario.";
     char texto4[] = "3 - Encerrar execucao do sistema.";
 
+    char texto5[] = "Selecione um dos servicos : ";
+    char texto6[] = "1 - Selecionar servicos de usuarios.";
+    char texto7[] = "2 - Selecionar servicos relacionados a hospedagens.";
+    char texto8[] = "3 - Encerrar sessao.";
+
+    char texto9[] = "Falha na autenticacao. Digite algo para continuar.";
+
     int campo;
     bool apresentar = true;
 
@@ -28,6 +35,35 @@ void CntrApresentacaoControle::executar(){
 
         switch (campo){
         case 1:
+            if (cntrApresentacaoAutenticacao->autenticar(&mat)){
+                bool apresentar = true;
+                while(apresentar){
+                    cout << texto5 << endl;
+                    cout << texto6 << endl;
+                    cout << texto7 << endl;
+                    cout << texto8 << endl;
+
+                    int campo;
+                    system("CLS");
+                    cin >> campo;
+                    switch(campo){
+                    case 1:
+                        cntrApresentacaoUsuario->executar(&mat);
+                        break;
+                    case 2:
+                        cntrApresentacaoProjeto->executar(&mat);
+                        break;
+                    case 3:
+                        apresentar = false;
+                        break;
+                    }
+                }
+            }
+            else {
+                system("CLS");
+                cout << texto9 << endl;
+                getchar();
+            }
             break;
         case 2:
             cntrApresentacaoUsuario->cadastrar();
@@ -68,6 +104,7 @@ bool CntrApresentacaoAutenticacao::autenticar(Matricula *mat){
             system("CLS");
             cout << texto3 << endl;
             getchar();
+            break;
         }
     }
     return (cntr->autenticar(mat, &senha));
