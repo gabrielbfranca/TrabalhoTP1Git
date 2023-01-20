@@ -38,13 +38,14 @@ void CntrApresentacaoControle::executar(){
             if (cntrApresentacaoAutenticacao->autenticar(&mat)){
                 bool apresentar = true;
                 while(apresentar){
+                    system("CLS");
+
                     cout << texto5 << endl;
                     cout << texto6 << endl;
                     cout << texto7 << endl;
                     cout << texto8 << endl;
 
                     int campo;
-                    system("CLS");
                     cin >> campo;
                     switch(campo){
                     case 1:
@@ -114,12 +115,14 @@ bool CntrApresentacaoAutenticacao::autenticar(Matricula *mat){
 
 bool CntrApresentacaoUsuario::cadastrar(){
     string texto1 = "Preencha os seguintes campos: ";
-    string texto2 = "Nome: ";
-    string texto3 = "Matricula: ";
-    string texto4 = "Senha: ";
-    string texto5 = "Dados em formato incorreto. Digite algo.";
+    string texto2 = "Primeiro nome: ";
+    string texto3 = "Primeiro sobrenome: ";
+    string texto4 = "Segundo sobrenome: ";
+    string texto5 = "Matricula: ";
+    string texto6 = "Senha: ";
+    string texto7 = "Dados em formato incorreto. Digite algo.";
 
-    string dado1, dado2, dado3;
+    string dado1, dado2, dado3, dado4, dado5;
 
     Usuario usuario;
     Nome nome;
@@ -135,14 +138,35 @@ bool CntrApresentacaoUsuario::cadastrar(){
     cin >> dado2;
     cout << texto4 << endl;
     cin >> dado3;
+    cout << texto5 << endl;
+    cin >> dado4;
+    cout << texto6 << endl;
+    cin >> dado5;
 
     try{
-        nome.setValor(dado1);
-        mat.setValor(dado2);
-        senha.setValor(dado3);
+        string temp = dado1 + " " + dado2 + " " + dado3;
+        nome.setValor(temp);
     }
     catch(invalid_argument &exp){
-        cout << texto5 << endl;
+        cout << "Nome invalido" << endl;
+        cin.ignore();
+        cin.ignore();
+        return false;
+    }
+    try{
+        mat.setValor(dado4);
+    }
+    catch(invalid_argument &exp){
+        cout << "Matricula invalida" << endl;
+        cin.ignore();
+        cin.ignore();
+        return false;
+    }
+    try{
+        senha.setValor(dado5);
+    }
+    catch(invalid_argument &exp){
+        cout << "Senha invalida" << endl;
         cin.ignore();
         cin.ignore();
         return false;
