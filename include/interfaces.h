@@ -21,6 +21,7 @@ class IApresentacaoUsuario {
 public:
     virtual bool cadastrar() = 0;
     virtual void executar(Matricula*) = 0;
+    virtual bool editar(Matricula*) = 0;
     virtual void setCntrServicoUsuario(IServicoUsuario*) = 0;
     virtual ~IApresentacaoUsuario(){};
 };

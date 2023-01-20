@@ -34,7 +34,7 @@ bool CntrServicoUsuario::descadastrar(Matricula *mat){
 
 bool CntrServicoUsuario::alterar(Usuario *usuario){
     ContainerUsuario* cp = ContainerUsuario::getInstancia();
-    return(cp->incluir(usuario));
+    return(cp->atualizar(usuario));
 }
 
 bool CntrServicoUsuario::cadastrar(Usuario *usuario){

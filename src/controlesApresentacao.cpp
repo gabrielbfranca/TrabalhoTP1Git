@@ -9,20 +9,22 @@ using namespace std;
 // ---------------------------------------------------------
 
 void CntrApresentacaoControle::executar(){
-    char texto1[] = "Selecione um dos servicos : ";
+    char texto1[] = "Selecione um dos servicos (apenas numeros) : ";
     char texto2[] = "1 - Acessar sistema.";
     char texto3[] = "2 - Cadastrar usuario.";
     char texto4[] = "3 - Encerrar execucao do sistema.";
 
     char texto5[] = "Selecione um dos servicos : ";
     char texto6[] = "1 - Selecionar servicos de usuarios.";
-    char texto7[] = "2 - Selecionar servicos relacionados a hospedagens.";
+    char texto7[] = "2 - Selecionar servicos relacionados a projetos.";
     char texto8[] = "3 - Encerrar sessao.";
 
-    char texto9[] = "Falha na autenticacao. Digite algo para continuar.";
+    char texto9[] = "Falha na autenticacao. Digite algo para voltar.";
+    char texto10[] = "Digite uma das opcoes acima. Aperte enter para continuar.";
 
     int campo;
     bool apresentar = true;
+    bool apresentar2 = true;
 
     while (apresentar){
         system("CLS");
@@ -35,9 +37,9 @@ void CntrApresentacaoControle::executar(){
 
         switch (campo){
         case 1:
-            if (cntrApresentacaoAutenticacao->autenticar(&mat)){
-                bool apresentar = true;
-                while(apresentar){
+            apresentar2 = true;
+            while(apresentar2){
+                if(cntrApresentacaoAutenticacao->autenticar(&mat)){
                     system("CLS");
 
                     cout << texto5 << endl;
@@ -55,22 +57,38 @@ void CntrApresentacaoControle::executar(){
                         cntrApresentacaoProjeto->executar(&mat);
                         break;
                     case 3:
-                        apresentar = false;
+                        apresentar2 = false;
                         break;
                     }
                 }
-            }
-            else {
-                system("CLS");
-                cout << texto9 << endl;
-                getchar();
+                else {
+                    system("CLS");
+                    cout << texto9 << endl;
+                    cin.ignore();
+                    cin.ignore();
+                    apresentar2 = false;
+                }
             }
             break;
         case 2:
-            cntrApresentacaoUsuario->cadastrar();
+            if(cntrApresentacaoUsuario->cadastrar()){
+                system("CLS");
+                cout << "Cadastrado com sucesso. Aperte enter para voltar." << endl;
+                cin.ignore();
+            }
+            else{
+                system("CLS");
+                cout << "Erro no cadastro. Aperte enter para voltar." << endl;
+            }
+            cin.ignore();
             break;
         case 3:
             apresentar = false;
+            break;
+        default:
+            cout << texto10 << endl;
+            cin.ignore();
+            cin.ignore();
             break;
         }
     }
@@ -148,7 +166,7 @@ bool CntrApresentacaoUsuario::cadastrar(){
         nome.setValor(temp);
     }
     catch(invalid_argument &exp){
-        cout << "Nome invalido" << endl;
+        cout << "Nome invalido. Aperte enter para voltar" << endl;
         cin.ignore();
         cin.ignore();
         return false;
@@ -157,7 +175,7 @@ bool CntrApresentacaoUsuario::cadastrar(){
         mat.setValor(dado4);
     }
     catch(invalid_argument &exp){
-        cout << "Matricula invalida" << endl;
+        cout << "Matricula invalida. Aperte enter para voltar." << endl;
         cin.ignore();
         cin.ignore();
         return false;
@@ -166,7 +184,7 @@ bool CntrApresentacaoUsuario::cadastrar(){
         senha.setValor(dado5);
     }
     catch(invalid_argument &exp){
-        cout << "Senha invalida" << endl;
+        cout << "Senha invalida. Aperte enter para voltar." << endl;
         cin.ignore();
         cin.ignore();
         return false;
@@ -187,8 +205,9 @@ void CntrApresentacaoUsuario::executar(Matricula *mat){
     string texto6 = "Usuario descadastrado com sucesso.";
     string texto7 = "Falha em descadastrar o usuario.";
 
-    int campo;
+    int campo2;
     bool apresentar = true;
+    CntrApresentacaoUsuario cntrApresentacaoUsuario;
 
     while (apresentar)
     {
@@ -198,14 +217,19 @@ void CntrApresentacaoUsuario::executar(Matricula *mat){
         cout << texto3 << endl; // Imprime nome do campo.
         cout << texto4 << endl; // Imprime nome do campo.
 
-        int campo2 = getch() - 48;
+        cin >> campo2;
         switch (campo2)
         {
         case 1:
-            // editar
+            cntrApresentacaoUsuario.editar(mat);
             break;
         case 2:
-            // descadastrar
+            cntr->descadastrar(mat);
+            system("CLS");
+            cout << "Usuario descadastrado. Aperte enter para voltar." << endl;
+            cin.ignore();
+            cin.ignore();
+            apresentar = false;
             break;
         case 3:
             apresentar = false;
@@ -216,9 +240,9 @@ void CntrApresentacaoUsuario::executar(Matricula *mat){
 
 bool CntrApresentacaoUsuario::editar(Matricula *mat) {
     string texto1 = "Preencha os seguintes campos: ";
-    string texto2 ="Novo nome: ";
-    string texto3 ="Nova senha: ";
-    string texto4 ="Dados em formato incorreto. Digite algo.";
+    string texto2 = "Novo nome: ";
+    string texto3 = "Nova senha: ";
+    string texto4 = "Dados em formato incorreto. Digite algo.";
 
     string dado1, dado2;
 
@@ -248,7 +272,7 @@ bool CntrApresentacaoUsuario::editar(Matricula *mat) {
     usuario.setNome(nome);
     usuario.setSenha(senha);
 
-    return (cntr->cadastrar(&usuario));
+    return (cntr->alterar(&usuario));
 }
 
 // ---------------------------------------------------------
@@ -275,6 +299,7 @@ void CntrApresentacaoProjeto::executar(){
         switch(campo){
         case 1:
             cout << cntrProjeto->listar() << endl;
+            getchar();
             break;
         case 2:
             apresentar = false;
