@@ -102,7 +102,7 @@ bool CntrApresentacaoAutenticacao::autenticar(Matricula *mat){
         }
         catch(invalid_argument &exp){
             system("CLS");
-            cout << texto3 << endl;
+            cout << exp.what() << endl;
             getchar();
             break;
         }
@@ -137,12 +137,38 @@ bool CntrApresentacaoUsuario::cadastrar(){
     cin >> dado3;
 
     try{
+<<<<<<< Updated upstream
         nome.setValor(dado1);
         mat.setValor(dado2);
         senha.setValor(dado3);
     }
     catch(invalid_argument &exp){
         cout << texto5 << endl;
+=======
+        string temp = dado1 + " " + dado2 + " " + dado3;
+        nome.setValor(temp);
+    }
+    catch(invalid_argument &exp){
+        cout << exp.what() << endl;
+        cin.ignore();
+        cin.ignore();
+        return false;
+    }
+    try{
+        mat.setValor(dado4);
+    }
+    catch(invalid_argument &exp){
+        cout << exp.what() << endl;
+        cin.ignore();
+        cin.ignore();
+        return false;
+    }
+    try{
+        senha.setValor(dado5);
+    }
+    catch(invalid_argument &exp){
+        cout << exp.what() << endl;
+>>>>>>> Stashed changes
         cin.ignore();
         cin.ignore();
         return false;
@@ -215,7 +241,7 @@ bool CntrApresentacaoUsuario::editar(Matricula *mat) {
         senha.setValor(dado2);
     }
     catch(invalid_argument &exp){
-        cout << texto4 << endl;
+        cout << exp.what() << endl;
         cin.ignore();
         cin.ignore();
         return false;
@@ -290,7 +316,7 @@ bool CntrApresentacaoProjeto::editarProjeto(){
             descricao.setValor(campo3);
         }
         catch(invalid_argument &exp) {
-            cout << texto5 << endl;
+            cout << exp.what() << endl;
             getchar();
         }
 
@@ -350,7 +376,7 @@ bool CntrApresentacaoProjeto::editarTarefa(){
             disc.setValor(campo5);
         }
         catch(invalid_argument &exp) {
-            cout << texto7 << endl;
+            cout << exp.what() << endl;
             getchar();
         }
 
@@ -454,7 +480,7 @@ bool CntrApresentacaoProjeto::incluirProjeto(){
         descricao.setValor(campo3);
     }
     catch(invalid_argument &exp){
-        cout << texto5 << endl;
+        cout << exp.what() << endl;
         getchar();
     }
 
@@ -516,7 +542,7 @@ bool CntrApresentacaoProjeto::incluirTarefa(){
         disc.setValor(campo5);
     }
     catch(invalid_argument &exp){
-        cout << texto7 << endl;
+        cout << exp.what() << endl;
         getchar();
     }
 
@@ -650,7 +676,7 @@ bool CntrApresentacaoProjeto::excluirProjeto(){
         codigo.setValor(campo);
     }
     catch(invalid_argument &exp){
-        cout << texto3 << endl;
+        cout << exp.what() << endl;
         getchar();
     }
 
