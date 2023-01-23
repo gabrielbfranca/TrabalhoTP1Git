@@ -261,6 +261,7 @@ bool CntrApresentacaoUsuario::editar(Matricula *mat) {
     string dado1, dado2, dado3, dado4;
 
     Usuario usuario;
+    Matricula mat2;
     Nome nome;
     Senha senha;
 
@@ -287,7 +288,8 @@ bool CntrApresentacaoUsuario::editar(Matricula *mat) {
         return false;
     }
 
-    usuario.setMatricula(*mat);
+    mat2.setValor(mat->getValor());
+    usuario.setMatricula(mat2);
     usuario.setNome(nome);
     usuario.setSenha(senha);
 
