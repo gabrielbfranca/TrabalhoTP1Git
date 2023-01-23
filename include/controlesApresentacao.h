@@ -37,7 +37,7 @@ class CntrApresentacaoUsuario: public IApresentacaoUsuario {
 private:
     IServicoUsuario *cntr;
 public:
-    bool editar(Matricula *mat);
+    bool editar(Matricula *mat) override;
     bool cadastrar() override;
     void executar(Matricula *mat) override;
     void setCntrServicoUsuario(IServicoUsuario *cntr) override {this->cntr = cntr;};

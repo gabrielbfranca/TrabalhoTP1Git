@@ -221,7 +221,18 @@ void CntrApresentacaoUsuario::executar(Matricula *mat){
         switch (campo2)
         {
         case 1:
-            cntrApresentacaoUsuario.editar(mat);
+            if (editar(mat)){
+                system("CLS");
+                cout << "usuario alterado com sucesso" << endl;
+                cin.ignore();
+                cin.ignore();
+            }
+            else {
+                system("CLS");
+                cout << "alteracao nao realizada" << endl;
+                cin.ignore();
+                cin.ignore();
+            }
             break;
         case 2:
             cntr->descadastrar(mat);
@@ -245,7 +256,7 @@ bool CntrApresentacaoUsuario::editar(Matricula *mat) {
     string texto3 = "Novo primeiro sobrenome: ";
     string texto4 = "Novo segundo sobrenome: ";
     string texto5 = "Nova senha: ";
-    string texto6 = "Dados em formato incorreto. Digite algo.";
+    string texto6 = "Dados em formato incorreto. Digite enter para voltar.";
 
     string dado1, dado2, dado3, dado4;
 
@@ -326,7 +337,7 @@ void CntrApresentacaoProjeto::executar(){
 
 bool CntrApresentacaoProjeto::editarProjeto(){
         char texto1[] = "Preencha os seguintes campos: ";
-        char texto2[] = "Codigo da hospedagem que voce quer editar:";
+        char texto2[] = "Codigo do projeto a ser editado:";
         char texto3[] = "Nome: ";
         char texto4[] = "Descricao:";
         char texto5[] = "Dados em formato incorreto. Digite algo.";
@@ -380,7 +391,7 @@ bool CntrApresentacaoProjeto::editarProjeto(){
 
 bool CntrApresentacaoProjeto::editarTarefa(){
     char texto1[] = "Preencha os seguintes campos: ";
-        char texto2[] = "Codigo da avaliacao que você quer editar: ";
+        char texto2[] = "Codigo da tarefa a ser editada: ";
         char texto3[] = "Nome: ";
         char texto4[] = "Data de inicio: ";
         char texto5[] = "Data de termino: ";
@@ -421,6 +432,7 @@ bool CntrApresentacaoProjeto::editarTarefa(){
         catch(invalid_argument &exp) {
             cout << texto7 << endl;
             getchar();
+            return false;
         }
 
         Tarefa tarefa;
@@ -434,10 +446,12 @@ bool CntrApresentacaoProjeto::editarTarefa(){
         if (cntrTarefa->editar(&tarefa)){
             cout << texto8 << endl;
             getchar();
+            return true;
         }
         else {
             cout << texto9 << endl;
             getchar();
+            return false;
         }
 }
 
