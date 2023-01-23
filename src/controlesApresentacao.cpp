@@ -326,7 +326,7 @@ void CntrApresentacaoProjeto::executar(){
 
 bool CntrApresentacaoProjeto::editarProjeto(){
         char texto1[] = "Preencha os seguintes campos: ";
-        char texto2[] = "Codigo da hospedagem que você quer editar:";
+        char texto2[] = "Codigo da hospedagem que voce quer editar:";
         char texto3[] = "Nome: ";
         char texto4[] = "Descricao:";
         char texto5[] = "Dados em formato incorreto. Digite algo.";
@@ -357,20 +357,24 @@ bool CntrApresentacaoProjeto::editarProjeto(){
         catch(invalid_argument &exp) {
             cout << texto5 << endl;
             getchar();
+            return false;
         }
 
         Projeto projeto;
 
+        projeto.setCodigo(codigo);
         projeto.setNome(nome);
         projeto.setDescricao(descricao);
 
         if (cntrProjeto->editar(&projeto)){
             cout << texto6 << endl;
             getchar();
+            return true;
         }
         else {
             cout << texto7 << endl;
             getchar();
+            return false;
         }
 }
 
@@ -478,10 +482,6 @@ void CntrApresentacaoProjeto::editar(){
             cin.ignore();
             break;
         case 3:
-            cin.ignore();
-            cin.ignore();
-            break;
-        case 4:
             apresentar = false;
             break;
         }
