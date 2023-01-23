@@ -238,13 +238,16 @@ void CntrApresentacaoUsuario::executar(Matricula *mat){
     }
 }
 
+// ERRO
 bool CntrApresentacaoUsuario::editar(Matricula *mat) {
     string texto1 = "Preencha os seguintes campos: ";
-    string texto2 = "Novo nome: ";
-    string texto3 = "Nova senha: ";
-    string texto4 = "Dados em formato incorreto. Digite algo.";
+    string texto2 = "Novo primeiro nome: ";
+    string texto3 = "Novo primeiro sobrenome: ";
+    string texto4 = "Novo segundo sobrenome: ";
+    string texto5 = "Nova senha: ";
+    string texto6 = "Dados em formato incorreto. Digite algo.";
 
-    string dado1, dado2;
+    string dado1, dado2, dado3, dado4;
 
     Usuario usuario;
     Nome nome;
@@ -257,18 +260,23 @@ bool CntrApresentacaoUsuario::editar(Matricula *mat) {
     cin >> dado1;
     cout << texto3;
     cin >> dado2;
+    cout << texto4;
+    cin >> dado3;
+    cout << texto5;
+    cin >> dado4;
 
     try{
-        nome.setValor(dado1);
-        senha.setValor(dado2);
+        nome.setValor(dado1 + " " + dado2 + " " + dado3);
+        senha.setValor(dado4);
     }
     catch(invalid_argument &exp){
-        cout << texto4 << endl;
+        cout << texto6 << endl;
         cin.ignore();
         cin.ignore();
         return false;
     }
 
+    usuario.setMatricula(*mat);
     usuario.setNome(nome);
     usuario.setSenha(senha);
 
@@ -505,6 +513,7 @@ bool CntrApresentacaoProjeto::incluirProjeto(){
     catch(invalid_argument &exp){
         cout << texto5 << endl;
         getchar();
+        return false;
     }
 
     Projeto projeto;
@@ -521,6 +530,7 @@ bool CntrApresentacaoProjeto::incluirProjeto(){
     else {
         cout << texto7 << endl;
         getchar();
+        return false;
     }
 }
 
@@ -567,6 +577,7 @@ bool CntrApresentacaoProjeto::incluirTarefa(){
     catch(invalid_argument &exp){
         cout << texto7 << endl;
         getchar();
+        return false;
     }
 
     Tarefa tarefa;
@@ -584,6 +595,7 @@ bool CntrApresentacaoProjeto::incluirTarefa(){
     else {
         cout << texto9 << endl;
         getchar();
+        return false;
     }
 }
 
@@ -701,15 +713,18 @@ bool CntrApresentacaoProjeto::excluirProjeto(){
     catch(invalid_argument &exp){
         cout << texto3 << endl;
         getchar();
+        return false;
     }
 
     if (cntrProjeto->excluir(&codigo)){
         cout << texto4 << endl;
         getchar();
+        return true;
     }
     else
         cout << texto5 << endl;
         getchar();
+        return false;
 }
 
 bool CntrApresentacaoProjeto::excluirTarefa(){
@@ -813,6 +828,7 @@ void CntrApresentacaoProjeto::executar(Matricula *mat){
         cout << texto4 << endl;
         cout << texto5 << endl;
         cout << texto6 << endl;
+        cout << texto7 << endl;
 
         cin >> campo;
 
