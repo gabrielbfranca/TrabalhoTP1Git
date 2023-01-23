@@ -118,7 +118,7 @@ string CntrServicoTarefa::visualizar(Codigo *codigo){
         return "Tarefa nao encontrada";
     string saida = "Codigo: ";
     saida += tarefa->getCodigo().getValor();
-    saida += "\nNome";
+    saida += "\nNome: ";
     saida += tarefa->getNome().getValor();
     saida += "\nDisciplina: ";
     saida += tarefa->getDisciplina().getValor();

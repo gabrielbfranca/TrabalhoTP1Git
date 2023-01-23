@@ -107,9 +107,6 @@ int ContainerProjeto::contar(string key){
 
 bool ContainerTarefa::incluir(Tarefa* tarefa){
     string key = tarefa->getCodigo().getValor();
-    if(!(incluir(tarefa)))
-        return false;
-
     bool valor = true;
     if(container.count(key) < 1)
         container[key] = *tarefa;

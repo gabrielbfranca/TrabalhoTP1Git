@@ -289,7 +289,8 @@ void CntrApresentacaoProjeto::executar(){
 
     char texto1[] = "Selecione um dos servicos: ";
     char texto2[] = "1 - Consultar Projetos.";
-    char texto3[] = "2 - Retornar.";
+    char texto3[] = "2 - Consultar Tarefas.";
+    char texto4[] = "3 - Retornar.";
 
     int campo;
 
@@ -301,15 +302,22 @@ void CntrApresentacaoProjeto::executar(){
         cout << texto1 << endl;
         cout << texto2 << endl;
         cout << texto3 << endl;
+        cout << texto4 << endl;
 
-        campo = getch() - 48;
+        cin >> campo;
 
         switch(campo){
         case 1:
             cout << cntrProjeto->listar() << endl;
+            cin.ignore();
             getchar();
             break;
         case 2:
+            cout << cntrTarefa->listar() << endl;
+            cin.ignore();
+            getchar();
+            break;
+        case 3:
             apresentar = false;
             break;
         }
@@ -569,13 +577,41 @@ bool CntrApresentacaoProjeto::incluirTarefa(){
 
     try{
         codigo.setValor(campo1);
+    }
+    catch(invalid_argument &exp){
+        cout << "Codigo em formato incorreto" << endl;
+        getchar();
+        return false;
+    }
+    try{
         nome.setValor(campo2);
+    }
+    catch (invalid_argument &exp){
+        cout << "Nome em formato incorreto" << endl;
+        getchar();
+        return false;
+    }
+    try{
         inicio.setValor(campo3);
+    }
+    catch(invalid_argument &exp){
+        cout << "data de inicio em formato incorreto" << endl;
+        getchar();
+        return false;
+    }
+    try{
         termino.setValor(campo4);
+    }
+    catch(invalid_argument &exp){
+        cout << "data de inicio em formato incorreto" << endl;
+        getchar();
+        return false;
+    }
+    try{
         disc.setValor(campo5);
     }
     catch(invalid_argument &exp){
-        cout << texto7 << endl;
+        cout << "disciplina em formato incorreto" << endl;
         getchar();
         return false;
     }
@@ -754,10 +790,12 @@ bool CntrApresentacaoProjeto::excluirTarefa(){
     if (cntrTarefa->excluir(&codigo)){
         cout << texto4 << endl;
         getchar();
+        return true;
     }
     else {
         cout << texto5 << endl;
         getchar();
+        return false;
     }
 }
 
@@ -766,8 +804,8 @@ void CntrApresentacaoProjeto::visualizar(){
     string texto2 = "1 - Visualizar Projetos";
     string texto3 = "2 - Visualizar Tarefas";
     string texto4 = "3 - Voltar";
-    string texto6 = "Digite o código dos Projetos que deseja visualizar: ";
-    string texto7 = "Digite o código das Tarefas que deseja visualizar: ";
+    string texto6 = "Digite o codigo dos Projetos que deseja visualizar: ";
+    string texto7 = "Digite o codigo das Tarefas que deseja visualizar: ";
 
     string cod;
     Codigo codigo;
