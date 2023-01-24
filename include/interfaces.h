@@ -46,6 +46,7 @@ public:
     virtual bool alterar(Usuario*) = 0;
     virtual bool cadastrar(Usuario*) = 0;
     virtual bool cadastrarProjeto(Matricula*, string) = 0;
+    virtual string visualizar(Matricula*) = 0;
 };
 
 class IServicoProjeto {

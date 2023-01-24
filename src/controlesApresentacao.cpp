@@ -201,12 +201,14 @@ void CntrApresentacaoUsuario::executar(Matricula *mat){
     char texto1[] = "Selecione um dos servicos : ";
     char texto2[] = "1 - Editar Dados do Usuario.";
     char texto3[] = "2 - Excluir Cadastro do Usuario.";
-    char texto4[] = "3 - Retornar.";
+    char texto4[] = "3 - Visualizar dados do Usuario.";
+    char texto5[] = "4 - Retornar.";
     string texto6 = "Usuario descadastrado com sucesso.";
     string texto7 = "Falha em descadastrar o usuario.";
 
     int campo2;
     bool apresentar = true;
+    Matricula mat2;
     CntrApresentacaoUsuario cntrApresentacaoUsuario;
 
     while (apresentar)
@@ -216,6 +218,7 @@ void CntrApresentacaoUsuario::executar(Matricula *mat){
         cout << texto2 << endl; // Imprime nome do campo.
         cout << texto3 << endl; // Imprime nome do campo.
         cout << texto4 << endl; // Imprime nome do campo.
+        cout << texto5 << endl; // Imprime nome do campo.
 
         cin >> campo2;
         switch (campo2)
@@ -243,6 +246,12 @@ void CntrApresentacaoUsuario::executar(Matricula *mat){
             apresentar = false;
             break;
         case 3:
+            mat2.setValor(mat->getValor());
+            cout << cntr->visualizar(mat) << endl;
+            cin.ignore();
+            cin.ignore();
+            break;
+        case 4:
             apresentar = false;
             break;
         }

@@ -21,6 +21,7 @@ public:
     bool alterar(Usuario *usuario) override;
     bool cadastrar(Usuario *usuario) override;
     bool cadastrarProjeto(Matricula *mat, string projeto) override;
+    string visualizar(Matricula *mat) override;
 };
 
 // ----------------------------------------------------------

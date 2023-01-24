@@ -47,6 +47,18 @@ bool CntrServicoUsuario::cadastrarProjeto(Matricula *mat, string projeto){
     return relacao->incluir(projeto, mat->getValor());
 }
 
+string CntrServicoUsuario::visualizar(Matricula *mat){
+    ContainerUsuario* cp = ContainerUsuario::getInstancia();
+    Usuario* usuario = cp->pesquisar(mat->getValor());
+    if (usuario == nullptr)
+        return "Usuario nao encontrado.";
+    string saida = "Matricula: ";
+    saida += usuario->getMatricula().getValor();
+    saida += "\nNome: ";
+    saida += usuario->getNome().getValor();
+    return saida;
+}
+
 // ----------------------------------------------------
 
 bool CntrServicoProjeto::incluir(Projeto *projeto){
