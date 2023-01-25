@@ -347,123 +347,123 @@ void CntrApresentacaoProjeto::executar(){
 }
 
 bool CntrApresentacaoProjeto::editarProjeto(){
-        char texto1[] = "Preencha os seguintes campos: ";
-        char texto2[] = "Codigo do projeto a ser editado:";
-        char texto3[] = "Nome: ";
-        char texto4[] = "Descricao:";
-        char texto5[] = "Dados em formato incorreto. Digite algo.";
-        char texto6[] = "Sucesso no cadastramento. Digite algo.";
-        char texto7[] = "Falha no cadastramento. Digite algo.";
+    char texto1[] = "Preencha os seguintes campos: ";
+    char texto2[] = "Codigo do projeto a ser editado:";
+    char texto3[] = "Nome: ";
+    char texto4[] = "Descricao:";
+    char texto5[] = "Dados em formato incorreto. Digite algo.";
+    char texto6[] = "Sucesso no cadastramento. Digite algo.";
+    char texto7[] = "Falha no cadastramento. Digite algo.";
 
-        char campo1[80], campo2[80], campo3[80];
+    char campo1[80], campo2[80], campo3[80];
 
-        Codigo codigo;
-        Texto nome;
-        Texto descricao;
+    Codigo codigo;
+    Texto nome;
+    Texto descricao;
 
-        system("CLS");
+    system("CLS");
 
-        cout << texto1 << endl;
-        cout << texto2 << endl;
-        cin >> campo1;
-        cout << texto3 << endl;
-        cin >> campo2;
-        cout << texto4 << endl;
-        cin >> campo3;
+    cout << texto1 << endl;
+    cout << texto2 << endl;
+    cin >> campo1;
+    cout << texto3 << endl;
+    cin >> campo2;
+    cout << texto4 << endl;
+    cin >> campo3;
 
-        try {
-            codigo.setValor(campo1);
-            nome.setValor(campo2);
-            descricao.setValor(campo3);
-        }
-        catch(invalid_argument &exp) {
-            cout << texto5 << endl;
-            getchar();
-            return false;
-        }
+    try {
+        codigo.setValor(campo1);
+        nome.setValor(campo2);
+        descricao.setValor(campo3);
+    }
+    catch(invalid_argument &exp) {
+        cout << texto5 << endl;
+        getchar();
+        return false;
+    }
 
-        Projeto projeto;
+    Projeto projeto;
 
-        projeto.setCodigo(codigo);
-        projeto.setNome(nome);
-        projeto.setDescricao(descricao);
+    projeto.setCodigo(codigo);
+    projeto.setNome(nome);
+    projeto.setDescricao(descricao);
 
-        if (cntrProjeto->editar(&projeto)){
-            cout << texto6 << endl;
-            getchar();
-            return true;
-        }
-        else {
-            cout << texto7 << endl;
-            getchar();
-            return false;
-        }
+    if (cntrProjeto->editar(&projeto)){
+        cout << texto6 << endl;
+        getchar();
+        return true;
+    }
+    else {
+        cout << texto7 << endl;
+        getchar();
+        return false;
+    }
 }
 
 bool CntrApresentacaoProjeto::editarTarefa(){
     char texto1[] = "Preencha os seguintes campos: ";
-        char texto2[] = "Codigo da tarefa a ser editada: ";
-        char texto3[] = "Nome: ";
-        char texto4[] = "Data de inicio: ";
-        char texto5[] = "Data de termino: ";
-        char texto6[] = "Disciplina: ";
-        char texto7[] = "Dados em formato incorreto. Digite algo.";
-        char texto8[] = "Sucesso no cadastramento. Digite algo.";
-        char texto9[] = "Falha no cadastramento. Digite algo.";
+    char texto2[] = "Codigo da tarefa a ser editada: ";
+    char texto3[] = "Nome: ";
+    char texto4[] = "Data de inicio: ";
+    char texto5[] = "Data de termino: ";
+    char texto6[] = "Disciplina: ";
+    char texto7[] = "Dados em formato incorreto. Digite algo.";
+    char texto8[] = "Sucesso no cadastramento. Digite algo.";
+    char texto9[] = "Falha no cadastramento. Digite algo.";
 
-        char campo1[80], campo2[80], campo3[80], campo4[80], campo5[80];
+    char campo1[80], campo2[80], campo3[80], campo4[80], campo5[80];
 
-        Codigo codigo;
-        Texto nome;
-        Data inicio;
-        Data termino;
-        Disciplina disc;
+    Codigo codigo;
+    Texto nome;
+    Data inicio;
+    Data termino;
+    Disciplina disc;
 
-        system("CLS");
+    system("CLS");
 
-        cout << texto1 << endl;
-        cout << texto2 << endl;
-        cin >> campo1;
-        cout << texto3 << endl;
-        cin >> campo2;
-        cout << texto4 << endl;
-        cin >> campo3;
-        cout << texto5 << endl;
-        cin >> campo4;
-        cout << texto6 << endl;
-        cin >> campo5;
+    cout << texto1 << endl;
+    cout << texto2 << endl;
+    cin >> campo1;
+    cout << texto3 << endl;
+    cin >> campo2;
+    cout << texto4 << endl;
+    cin >> campo3;
+    cout << texto5 << endl;
+    cin >> campo4;
+    cout << texto6 << endl;
+    cin >> campo5;
 
-        try{
-            codigo.setValor(campo1);
-            nome.setValor(campo2);
-            inicio.setValor(campo3);
-            termino.setValor(campo4);
-            disc.setValor(campo5);
-        }
-        catch(invalid_argument &exp) {
-            cout << texto7 << endl;
-            getchar();
-            return false;
-        }
+    try{
+        codigo.setValor(campo1);
+        nome.setValor(campo2);
+        inicio.setValor(campo3);
+        termino.setValor(campo4);
+        disc.setValor(campo5);
+    }
+    catch(invalid_argument &exp) {
+        cout << texto7 << endl;
+        getchar();
+        return false;
+    }
 
-        Tarefa tarefa;
+    Tarefa tarefa;
 
-        tarefa.setCodigo(codigo);
-        tarefa.setNome(nome);
-        tarefa.setInicio(inicio);
-        tarefa.setTermino(termino);
-        tarefa.setDisciplina(disc);
+    tarefa.setCodigo(codigo);
+    tarefa.setNome(nome);
+    tarefa.setInicio(inicio);
+    tarefa.setTermino(termino);
+    tarefa.setDisciplina(disc);
 
-        if (cntrTarefa->editar(&tarefa)){
-            cout << texto8 << endl;
-            getchar();
-            return true;
-        }
-        else {
-            cout << texto9 << endl;
-            getchar();
-            return false;
-        }
+    if (cntrTarefa->editar(&tarefa)){
+        cout << texto8 << endl;
+        getchar();
+        return true;
+    }
+    else {
+        cout << texto9 << endl;
+        getchar();
+        return false;
+    }
 }
 
 void CntrApresentacaoProjeto::editar(){
@@ -513,7 +513,7 @@ void CntrApresentacaoProjeto::editar(){
     }
 }
 
-bool CntrApresentacaoProjeto::incluirProjeto(){
+bool CntrApresentacaoProjeto::incluirProjeto(Matricula *mat){
     char texto1[] = "Preencha os seguintes campos: ";
     char texto2[] = "Codigo: ";
     char texto3[] = "Nome:";
@@ -527,6 +527,7 @@ bool CntrApresentacaoProjeto::incluirProjeto(){
     Codigo codigo;
     Texto nome;
     Texto descricao;
+    Matricula mat2;
 
     system("CLS");
 
@@ -539,6 +540,7 @@ bool CntrApresentacaoProjeto::incluirProjeto(){
     cin >> campo3;
 
     try {
+        mat2.setValor(mat->getValor());
         codigo.setValor(campo1);
         nome.setValor(campo2);
         descricao.setValor(campo3);
@@ -554,6 +556,7 @@ bool CntrApresentacaoProjeto::incluirProjeto(){
     projeto.setCodigo(codigo);
     projeto.setNome(nome);
     projeto.setDescricao(descricao);
+    projeto.setMatUsuario(mat2);
 
     if(cntrProjeto->incluir(&projeto)){
         cout << texto6 << endl;
@@ -574,17 +577,18 @@ bool CntrApresentacaoProjeto::incluirTarefa(){
     char texto4[] = "Data de inicio: ";
     char texto5[] = "Data de termino: ";
     char texto6[] = "Disciplina: ";
-    char texto7[] = "Dados em formato incorreto. Digite algo.";
+    char texto7[] = "Codigo do projeto associado: ";
     char texto8[] = "Sucesso no cadastramento. Digite algo.";
     char texto9[] = "Falha no cadastramento. Digite algo.";
 
-    char campo1[80], campo2[80], campo3[80], campo4[80], campo5[80];
+    char campo1[80], campo2[80], campo3[80], campo4[80], campo5[80], campo6[80];
 
     Codigo codigo;
     Texto nome;
     Data inicio;
     Data termino;
     Disciplina disc;
+    Codigo codProjeto;
 
     system("CLS");
 
@@ -599,6 +603,8 @@ bool CntrApresentacaoProjeto::incluirTarefa(){
     cin >> campo4;
     cout << texto6 << endl;
     cin >> campo5;
+    cout << texto7 << endl;
+    cin >> campo6;
 
     try{
         codigo.setValor(campo1);
@@ -640,6 +646,14 @@ bool CntrApresentacaoProjeto::incluirTarefa(){
         getchar();
         return false;
     }
+    try{
+        codProjeto.setValor(campo6);
+    }
+    catch(invalid_argument &exp){
+        cout << "codigo de projeto em formato incorreto" << endl;
+        getchar();
+        return false;
+    }
 
     Tarefa tarefa;
     tarefa.setCodigo(codigo);
@@ -647,20 +661,21 @@ bool CntrApresentacaoProjeto::incluirTarefa(){
     tarefa.setInicio(inicio);
     tarefa.setTermino(termino);
     tarefa.setDisciplina(disc);
+    tarefa.setCodProjeto(codProjeto);
 
     if (cntrTarefa->incluir(&tarefa)){
-        cout << texto8 << endl;
+        cout << texto7 << endl;
         getchar();
         return true;
     }
     else {
-        cout << texto9 << endl;
+        cout << texto8 << endl;
         getchar();
         return false;
     }
 }
 
-void CntrApresentacaoProjeto::incluir(){
+void CntrApresentacaoProjeto::incluir(Matricula *mat){
     string texto1 = "Selecione um dos servicos : ";
     string texto2 = "1 - Cadastrar Projeto.";
     string texto3 = "2 - Cadastrar Tarefa.";
@@ -683,7 +698,7 @@ void CntrApresentacaoProjeto::incluir(){
         cin >> campo;
         switch(campo){
         case 1:
-            if(incluirProjeto())
+            if(incluirProjeto(mat))
                 cout << texto5 << endl;
             else
                 cout << texto7 << endl;
@@ -897,7 +912,7 @@ void CntrApresentacaoProjeto::executar(Matricula *mat){
 
         switch(campo){
         case 1:
-            incluir();
+            incluir(mat);
             cin.ignore();
             break;
         case 2:

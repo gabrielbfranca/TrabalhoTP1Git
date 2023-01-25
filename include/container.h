@@ -61,17 +61,4 @@ private:
 };
 
 // ----------------------------------------------------
-
-class ProjetoToUsuario {
-private:
-    typedef unordered_map<string, string> map;
-    map container;
-    static ProjetoToUsuario *instancia;
-public:
-    static ProjetoToUsuario* getInstancia();
-    bool incluir(string projeto, string usuario);
-    void removerProjeto(string projeto);
-    void removerUsuario(string usuario);
-    int contar(string projeto);
-};
 #endif // CONTAINER_H

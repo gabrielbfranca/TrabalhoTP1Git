@@ -42,11 +42,6 @@ bool CntrServicoUsuario::cadastrar(Usuario *usuario){
     return(cp->incluir(usuario));
 }
 
-bool CntrServicoUsuario::cadastrarProjeto(Matricula *mat, string projeto){
-    ProjetoToUsuario *relacao = ProjetoToUsuario::getInstancia();
-    return relacao->incluir(projeto, mat->getValor());
-}
-
 string CntrServicoUsuario::visualizar(Matricula *mat){
     ContainerUsuario* cp = ContainerUsuario::getInstancia();
     Usuario* usuario = cp->pesquisar(mat->getValor());
@@ -89,6 +84,8 @@ string CntrServicoProjeto::visualizar(Codigo *codigo){
     saida += projeto->getNome().getValor();
     saida += "\nDescricao: ";
     saida += projeto->getDescricao().getValor();
+    saida += "\nUsuario associado: ";
+    saida += projeto->getMatUsuario().getValor();
     return saida;
 }
 
@@ -106,8 +103,11 @@ string CntrServicoProjeto::listar(){
 // ------------------------------------------------------
 
 bool CntrServicoTarefa::incluir(Tarefa *tarefa){
+    ContainerProjeto* cp = ContainerProjeto::getInstancia();
     ContainerTarefa* cs = ContainerTarefa::getInstancia();
-    return cs->incluir(tarefa);
+    if (cp->contar(tarefa->getCodProjeto().getValor()) == 1)
+        return cs->incluir(tarefa);
+    return false;
 }
 
 bool CntrServicoTarefa::excluir(Codigo *codigo){
@@ -138,6 +138,8 @@ string CntrServicoTarefa::visualizar(Codigo *codigo){
     saida += tarefa->getInicio().getValor();
     saida += "\nData de termino: ";
     saida += tarefa->getTermino().getValor();
+    saida += "\nProjeto associado: ";
+    saida += tarefa->getCodProjeto().getValor();
     return saida;
 }
 

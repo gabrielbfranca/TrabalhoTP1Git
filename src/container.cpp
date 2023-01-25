@@ -3,7 +3,6 @@
 ContainerUsuario* ContainerUsuario::instancia = nullptr;
 ContainerProjeto* ContainerProjeto::instancia = nullptr;
 ContainerTarefa* ContainerTarefa::instancia = nullptr;
-ProjetoToUsuario* ProjetoToUsuario::instancia = nullptr;
 
 // --------------------------------------------------------
 
@@ -25,12 +24,6 @@ ContainerTarefa* ContainerTarefa::getInstancia(){
     return instancia;
 }
 
-ProjetoToUsuario* ProjetoToUsuario::getInstancia(){
-    if(instancia == nullptr)
-        instancia = new ProjetoToUsuario();
-    return instancia;
-}
-
 // --------------------------------------------------------
 
 bool ContainerUsuario::incluir(Usuario* usuario){
@@ -44,8 +37,16 @@ bool ContainerUsuario::incluir(Usuario* usuario){
 }
 
 bool ContainerUsuario::remover(string key){
-    ProjetoToUsuario *relacao = ProjetoToUsuario::getInstancia();
-    relacao->removerUsuario(key);
+    // remover projeto
+    ContainerProjeto* cp = ContainerProjeto::getInstancia();
+    ContainerProjeto::cmap mp = cp->getMap();
+    for(ContainerProjeto::cmap::iterator i=mp.begin(); i!=mp.end(); i++){
+        if(i->second.getMatUsuario().getValor() == key){
+            cp->remover(i->second.getCodigo().getValor());
+        }
+    }
+
+    // remover usuario
     if(container.erase(key) == 1)
         return true;
     else
@@ -78,8 +79,16 @@ bool ContainerProjeto::incluir(Projeto* projeto){
 }
 
 bool ContainerProjeto::remover(string key){
-    ProjetoToUsuario *r1 = ProjetoToUsuario::getInstancia();
-    r1->removerProjeto(key);
+    // remover tarefa
+    ContainerTarefa* ct = ContainerTarefa::getInstancia();
+    ContainerTarefa::cmap mp = ct->getMap();
+    for(ContainerTarefa::cmap::iterator i=mp.begin(); i!=mp.end(); i++){
+        if(i->second.getCodProjeto().getValor() == key){
+            ct->remover(i->second.getCodigo().getValor());
+        }
+    }
+
+    // remover projeto
     if(container.erase(key) == 1)
         return true;
     else
@@ -133,34 +142,4 @@ bool ContainerTarefa::atualizar(Tarefa* tarefa){
     string key = tarefa->getCodigo().getValor();
     container[key] = *tarefa;
     return true;
-}
-
-// ------------------------------------------------------
-
-bool ProjetoToUsuario::incluir(string projeto, string usuario){
-    bool valor = true;
-    ContainerProjeto *cp = ContainerProjeto::getInstancia();
-    if(cp->contar(projeto) == 0)
-        return false;
-    if(container.count(projeto) <= 10)
-        container.insert({{projeto, usuario}});
-    else
-        valor = false;
-}
-
-void ProjetoToUsuario::removerProjeto(string projeto){
-    container.erase(projeto);
-}
-
-void ProjetoToUsuario::removerUsuario(string usuario){
-    for(map::iterator i=container.begin(); i!=container.end(); i++){
-        if(i->second == usuario){
-            container.erase(i);
-            break;
-        }
-    }
-}
-
-int ProjetoToUsuario::contar(string usuario){
-    return container.count(usuario);
 }

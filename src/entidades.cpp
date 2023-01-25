@@ -4,6 +4,7 @@ Projeto::Projeto() {
     nome = Texto();
     codigo = Codigo();
     descricao = Texto();
+    matUsuario = Matricula();
 }
 
 Tarefa::Tarefa(){
@@ -12,6 +13,7 @@ Tarefa::Tarefa(){
     inicio = Data();
     termino = Data();
     disciplina = Disciplina();
+    codProjeto = Codigo();
 }
 
 Usuario::Usuario(){
