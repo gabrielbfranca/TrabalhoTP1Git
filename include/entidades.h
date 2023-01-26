@@ -10,15 +10,18 @@ class Projeto {
         Texto nome;
         Codigo codigo;
         Texto descricao;
+        Matricula matUsuario;
     public:
         Projeto();
         void setNome(const Texto&);
         void setCodigo(const Codigo&);
         void setDescricao(const Texto&);
+        void setMatUsuario(const Matricula&);
 
         Texto getNome() const;
         Codigo getCodigo() const;
         Texto getDescricao() const;
+        Matricula getMatUsuario() const;
 };
 
 ///
@@ -45,6 +48,9 @@ inline Texto Projeto::getDescricao() const{
     return descricao;
 };
 
+inline Matricula Projeto::getMatUsuario() const{
+    return matUsuario;
+}
 ///
 /// Retorna objeto texto armazenado
 ///
@@ -69,6 +75,10 @@ inline void Projeto::setDescricao(const Texto& descricao){
     this->descricao = descricao;
 };
 
+inline void Projeto::setMatUsuario(const Matricula& matUsuario){
+    this->matUsuario = matUsuario;
+}
+
 // -----------------------------------------------------------------
 
 class Tarefa
@@ -79,18 +89,23 @@ class Tarefa
         Data inicio;
         Data termino;
         Disciplina disciplina;
+        Codigo codProjeto;
     public:
         Tarefa();
+
         void setNome(const Texto&);
         void setCodigo(const Codigo&);
         void setInicio(const Data&);
         void setTermino(const Data&);
         void setDisciplina(const Disciplina&);
+        void setCodProjeto(const Codigo&);
+
         Texto getNome() const;
         Codigo getCodigo() const;
         Data getInicio() const;
         Data getTermino() const;
         Disciplina getDisciplina() const;
+        Codigo getCodProjeto() const;
 };
 
 ///
@@ -133,6 +148,10 @@ inline Disciplina Tarefa::getDisciplina()const{
     return disciplina;
 }
 
+inline Codigo Tarefa::getCodProjeto() const{
+    return codProjeto;
+}
+
 ///
 /// Armazena objeto nome
 ///
@@ -171,6 +190,10 @@ inline void Tarefa::setTermino(const Data& termino){
 
 inline void Tarefa::setDisciplina(const Disciplina& disc){
     this->disciplina = disc;
+}
+
+inline void Tarefa::setCodProjeto(const Codigo& codProjeto){
+    this->codProjeto = codProjeto;
 }
 
 // ----------------------------------------------------------------

@@ -51,8 +51,8 @@ private:
     bool editarProjeto();
     bool editarTarefa();
 
-    void incluir();
-    bool incluirProjeto();
+    void incluir(Matricula* mat);
+    bool incluirProjeto(Matricula* mat);
     bool incluirTarefa();
 
     void excluir();
