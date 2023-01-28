@@ -121,7 +121,7 @@ bool CntrApresentacaoAutenticacao::autenticar(Matricula *mat){
         }
         catch(invalid_argument &exp){
             system("CLS");
-            cout << texto3 << endl;
+            cout << exp.what() << endl;
             getchar();
             break;
         }
@@ -166,7 +166,7 @@ bool CntrApresentacaoUsuario::cadastrar(){
         nome.setValor(temp);
     }
     catch(invalid_argument &exp){
-        cout << "Nome invalido. Aperte enter para voltar" << endl;
+        cout << exp.what() << endl;//"Nome invalido. Aperte enter para voltar" << endl;
         cin.ignore();
         cin.ignore();
         return false;
@@ -175,7 +175,7 @@ bool CntrApresentacaoUsuario::cadastrar(){
         mat.setValor(dado4);
     }
     catch(invalid_argument &exp){
-        cout << "Matricula invalida. Aperte enter para voltar." << endl;
+        cout << exp.what() << endl; //"Matricula invalida. Aperte enter para voltar." << endl;
         cin.ignore();
         cin.ignore();
         return false;
@@ -367,9 +367,11 @@ bool CntrApresentacaoProjeto::editarProjeto(){
     cout << texto2 << endl;
     cin >> campo1;
     cout << texto3 << endl;
-    cin >> campo2;
+    cin.ignore();
+    cin.getline(campo2, 80);
     cout << texto4 << endl;
-    cin >> campo3;
+    cin.ignore();
+    cin.getline(campo3, 80);
 
     try {
         codigo.setValor(campo1);
@@ -425,7 +427,8 @@ bool CntrApresentacaoProjeto::editarTarefa(){
     cout << texto2 << endl;
     cin >> campo1;
     cout << texto3 << endl;
-    cin >> campo2;
+    cin.ignore();
+    cin.getline(campo2, 80);
     cout << texto4 << endl;
     cin >> campo3;
     cout << texto5 << endl;
@@ -535,9 +538,11 @@ bool CntrApresentacaoProjeto::incluirProjeto(Matricula *mat){
     cout << texto2 << endl;
     cin >> campo1;
     cout << texto3 << endl;
-    cin >> campo2;
+    cin.ignore();
+    cin.getline(campo2, 80);
     cout << texto4 << endl;
-    cin >> campo3;
+    cin.ignore();
+    cin.getline(campo3, 80);
 
     try {
         mat2.setValor(mat->getValor());
@@ -546,7 +551,7 @@ bool CntrApresentacaoProjeto::incluirProjeto(Matricula *mat){
         descricao.setValor(campo3);
     }
     catch(invalid_argument &exp){
-        cout << texto5 << endl;
+        cout << exp.what() << endl;
         getchar();
         return false;
     }
@@ -596,7 +601,8 @@ bool CntrApresentacaoProjeto::incluirTarefa(){
     cout << texto2 << endl;
     cin >> campo1;
     cout << texto3 << endl;
-    cin >> campo2;
+    cin.ignore();
+    cin.getline(campo2, 80);
     cout << texto4 << endl;
     cin >> campo3;
     cout << texto5 << endl;
